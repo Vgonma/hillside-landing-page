@@ -1,16 +1,12 @@
 import React from 'react';
-import image from '../assets/images/playground.jpeg';
+import Hero from './hero';
+import AboutUs from './about-us';
 
 function Home() {
   return (
     <div className='home'>
-      <div className='home-title-container'>
-        <h1 className='home-title'>AT HILLSIDE WE...</h1>
-        <h1>LEARN!</h1>
-      </div>
-      <div className='home-image-container'>
-        <img src={image} alt='playground' />
-      </div>
+      <Hero />
+      <AboutUs />
     </div>
   );
 }

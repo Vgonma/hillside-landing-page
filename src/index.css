@@ -9,3 +9,10 @@ img {
   width: 100%;
   max-width: 100%;
 }
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 1em;
+}
