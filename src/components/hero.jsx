@@ -10,7 +10,7 @@ function Hero() {
           <h1>LeaRn!</h1>
         </div>
       </div>
-      <div className='hero-image-container'>
+      <div className='hero-image-container left-squiggly'>
         <img src={image} alt='playground' />
       </div>
     </div>
