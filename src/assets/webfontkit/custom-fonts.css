@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'garetbook';
+  src: url('garet-book-webfont.woff2') format('woff2'),
+    url('garet-book-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'garetbook';
+  src: url('garet-heavy-webfont.woff2') format('woff2'),
+    url('garet-heavy-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'high_cruiser';
+  src: url('./highcruiser-webfont.woff2') format('woff2'),
+    url('highcruiser-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'myriad_pro';
+  src: url('myriadpro-regular-webfont.woff2') format('woff2'),
+    url('myriadpro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp_telegraf';
+  src: url('pptelegraf-regular-webfont.woff2') format('woff2'),
+    url('pptelegraf-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp_telegraf';
+  src: url('pptelegraf-ultrabold-webfont.woff2') format('woff2'),
+    url('pptelegraf-ultrabold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
