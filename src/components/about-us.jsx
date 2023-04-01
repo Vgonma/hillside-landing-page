@@ -1,5 +1,5 @@
 import React from 'react';
-import crayonDrawing from '../assets/images/crayons.png';
+import crayonDrawing from '../assets/images/photos/crayons.png';
 
 function AboutUs() {
   return (

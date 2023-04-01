@@ -1,5 +1,5 @@
 import React from 'react';
-import painting from '../assets/images/painting.jpeg';
+import painting from '../assets/images/photos/painting.jpeg';
 
 function Program() {
   return (
