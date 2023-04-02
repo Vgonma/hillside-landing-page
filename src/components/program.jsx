@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import painting from '../assets/images/photos/painting.jpeg';
 
 function Program() {
   return (
     <div className='home-section three-panels'>
-      <div className='layer2'>
+      <div className='layer2 extend'>
         <img className='section-image' src={painting} alt='' />
       </div>
       <div className='layer1'>
@@ -24,13 +25,13 @@ function Program() {
             More
           </button>
         </div>
-        <div className='visit-panel bg-green left-squiggly'>
+        <NavLink to='contacto' className='visit-panel left-squiggly hover-panel-green'>
           <h3>
             AGENDA UNA
             <br />
             VISITA!
           </h3>
-        </div>
+        </NavLink>
       </div>
     </div>
   );

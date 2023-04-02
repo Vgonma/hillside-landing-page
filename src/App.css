@@ -124,6 +124,7 @@ text-decoration: underline;
   display: flex;
   justify-content: center;
   color: #008647;
+  padding: 2rem;
 }
 
 .hero-title-container h1 {
@@ -176,6 +177,17 @@ text-decoration: underline;
   letter-spacing: 0.3em;
   font-size: 24px;
   padding: 2rem;
+  text-decoration: none;
+}
+
+.hover-panel-green {
+  background-color: rgba(7, 137, 68, 0.5);
+  transition: background-color 0.3s ease;
+
+}
+
+.hover-panel-green:hover {
+  background-color: rgba(7, 137, 68, 0.85);
 }
 
 .info-panel {
@@ -196,6 +208,12 @@ text-decoration: underline;
   right: 25%;
   bottom: 0;
   z-index: -1;
+}
+
+.layer2.extend {
+  width: 80%;
+  right: 0;
+  left: auto;
 }
 
 .section-image {
