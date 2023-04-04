@@ -93,16 +93,21 @@
 
 .nav-link{
   font-family: 'pp_telegraf', sans-serif;
-  font-weight: bold;
   text-decoration: none;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 0.3rem;
+  color: var(--green);
 }
 
 .nav-link:hover {
-text-decoration: underline;
+  text-shadow: 1px 0 0 var(--green);
+  transform: rotate(7deg);
+}
+
+.nav-link:nth-child(even):hover {
+  transform: rotate(-7deg);
 }
 
 .nav-link.active {  
@@ -160,11 +165,12 @@ text-decoration: underline;
   column-gap: 40%;
 }
 
-.layer1 > div {
+.panel {
   flex: 1;
   max-width: 30%;
-
 }
+
+
 
 .visit-panel {
   background-color: #134b8b;
@@ -180,6 +186,14 @@ text-decoration: underline;
   text-decoration: none;
 }
 
+.hover-panel {
+  transition: background-color 0.3s ease;
+}
+
+.hover-panel:hover {
+  background-color: var(--yellow);
+}
+
 .hover-panel-green {
   background-color: rgba(7, 137, 68, 0.5);
   transition: background-color 0.3s ease;
@@ -187,7 +201,7 @@ text-decoration: underline;
 }
 
 .hover-panel-green:hover {
-  background-color: rgba(7, 137, 68, 0.85);
+  background-color: rgba(7, 137, 68, 0.90);
 }
 
 .info-panel {
@@ -198,6 +212,10 @@ text-decoration: underline;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+}
+
+.program-panel {
+  flex: auto;
 }
 
 .layer2 {
@@ -291,6 +309,7 @@ text-decoration: underline;
   display: flex;
   align-items: flex-end;
   pointer-events: none;
+  padding-top: min(185px, 20%);
 }
 
 .grass * {
@@ -326,6 +345,14 @@ text-decoration: underline;
 
 .footer-info-container .info4 {
   padding: 0.3rem;
+}
+
+.footer-icon {
+  max-width: 50px;
+}
+
+.footer-logo {
+  max-width: 100px;
 }
 
 .sun {

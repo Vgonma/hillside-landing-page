@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import crayonDrawing from '../assets/images/photos/crayons.png';
+import nosotros from '../assets/images/titles/NOSOTROS.svg'
 
 function AboutUs() {
   return (
@@ -8,17 +10,17 @@ function AboutUs() {
         <img className='section-image' src={crayonDrawing} alt='' />
       </div>
       <div className='layer1'>
-        <div className='visit-panel right-squiggly'>
-          <h3>
+        <Link to='contacto' className='visit-panel panel right-squiggly hover-panel'>
+          <h6>
             AGENDA UNA
             <br />
             VISITA!
-          </h3>
-        </div>
+          </h6>
+        </Link>
 
-        <div className='info-panel left-squiggly'>
+        <div className='panel info-panel left-squiggly'>
           <div className='title-img-container'>
-            <img src='#' alt='Nosotros' />
+            <img src={nosotros} alt='Nosotros' />
           </div>
           <p>
             Hace 26 años después de haber trabajado mucho tiempo cömo maestra,

@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import painting from '../assets/images/photos/painting.jpeg';
+import programa from '../assets/images/titles/NUESTRO-PROGRAMA.svg'
 
 function Program() {
   return (
@@ -9,9 +10,9 @@ function Program() {
         <img className='section-image' src={painting} alt='' />
       </div>
       <div className='layer1'>
-        <div className='info-panel right-squiggly'>
+        <div className='program-panel info-panel panel right-squiggly'>
           <div className='title-img-container'>
-            <img src='#' alt='Nosotros' />
+            <img src={programa} alt='Nosotros' />
           </div>
           <h3>Multi-Track</h3>
           <h4>múltiples vías de aprendizaje</h4>
@@ -25,13 +26,13 @@ function Program() {
             More
           </button>
         </div>
-        <NavLink to='contacto' className='visit-panel left-squiggly hover-panel-green'>
-          <h3>
+        <Link to='contacto' className='visit-panel left-squiggly hover-panel-green'>
+          <h6>
             AGENDA UNA
             <br />
             VISITA!
-          </h3>
-        </NavLink>
+          </h6>
+        </Link>
       </div>
     </div>
   );

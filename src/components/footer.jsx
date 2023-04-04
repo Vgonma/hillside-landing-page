@@ -34,15 +34,15 @@ function Footer() {
           </ul>
           <div className="info3">
             <a href="#">
-              <img src={instagram} alt="Instagram" />
+              <img className='footer-icon' src={instagram} alt="Instagram" />
             </a>
             <a href="#">
-              <img src={facebook} alt="Facebook" />
+              <img className='footer-icon' src={facebook} alt="Facebook" />
             </a>
           </div>
           <div className="info4">
             <a href="#">
-              <img src={logo} alt="Hillside Logo" />
+              <img className='footer-logo' src={logo} alt="Hillside Logo" />
             </a>
           </div>
 
