@@ -461,4 +461,9 @@
   .sun:hover {
     transform: translateY(-95%) scale(1.2);
   }
+
+  .info-panel {
+    padding: 2.2rem;
+    row-gap: 0;
+  }
 }
