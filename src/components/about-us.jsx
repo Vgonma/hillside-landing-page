@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import crayonDrawing from '../assets/images/photos/crayons.png';
+import photo from '../assets/images/photos/IMG_0063.jpg';
 import nosotros from '../assets/images/titles/NOSOTROS.svg';
 import moreBtn from '../assets/images/icons/more_1.png';
 import moreBtnHover from '../assets/images/icons/more_2.png';
@@ -11,7 +11,7 @@ function AboutUs() {
   return (
     <div className='home-section three-panels'>
       <div className='layer2'>
-        <img className='section-image' src={crayonDrawing} alt='' />
+        <img className='section-image' src={photo} alt='' />
       </div>
       <div className='layer1'>
         <Link

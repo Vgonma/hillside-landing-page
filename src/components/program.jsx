@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import painting from '../assets/images/photos/painting.jpeg';
+import photo from '../assets/images/photos/IMG_0043.jpg';
 import programa from '../assets/images/titles/NUESTRO-PROGRAMA.svg'
 import moreBtn from '../assets/images/icons/more_1.png';
 import moreBtnHover from '../assets/images/icons/more_2.png';
@@ -11,7 +11,7 @@ function Program() {
   return (
     <div className='home-section three-panels'>
       <div className='layer2 extend'>
-        <img className='section-image' src={painting} alt='' />
+        <img className='section-image' src={photo} alt='' />
       </div>
       <div className='layer1'>
         <div className='program-panel info-panel panel right-squiggly'>

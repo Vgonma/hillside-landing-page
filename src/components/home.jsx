@@ -12,7 +12,6 @@ function Home() {
       <AboutUs />
       <Program />
       <Activities />
-      <Footer />
     </div>
   );
 }
