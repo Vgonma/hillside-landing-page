@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import photo from 'src/assets/images/photos/IMG_0063.jpg';
+import photo from '../assets/images/photos/IMG_0063.jpg';
 import nosotros from '../assets/images/titles/NOSOTROS.svg';
 import moreBtn from '../assets/images/icons/more_1.png';
 import moreBtnHover from '../assets/images/icons/more_2.png';
