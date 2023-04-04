@@ -1,15 +1,21 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import instagram from '../assets/images/icons/instagram_icono.svg'
 import facebook from '../assets/images/icons/facebook_icono.svg'
 import logo from '../assets/images/logos/logo-blanco.svg'
 
 function Footer() {
+
+
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <footer className='footer '>
-      <button className='sun'>
+      <Link to='contacto' className='sun'>
         Agenda una visita!
-      </button>
+      </Link>
       <div className='grass top-squiggly-wide bg-green'>
         <div className='footer-info-container'>
           <ul className='info1'>
@@ -41,9 +47,9 @@ function Footer() {
             </a>
           </div>
           <div className="info4">
-            <a href="#">
+            <Link to='/' onClick={scrollToTop}>
               <img className='footer-logo' src={logo} alt="Hillside Logo" />
-            </a>
+            </Link>
           </div>
 
 

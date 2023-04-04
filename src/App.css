@@ -80,13 +80,31 @@
   top: 0;
   z-index: 100;
   background-color: white;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  height: 50px;
+  box-shadow: 0px 1px 10px #333;
+}
+
+.navbar-logo {
+  grid-column: 1;
+  max-height: 100%;
+  margin-left: 3px;
+  object-fit: contain;
+}
+
+.navbar-logo > img {
+  pointer-events: none;
+  max-height: 36px;
 }
 
 .navbar > ul {
+  grid-column: 2;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   column-gap: 6px;
-  max-width: 65%;
+  width: 100%;
   margin-left: auto;
   font-size: 18px;
 }
@@ -369,6 +387,8 @@
   color: white;
   font-size: 12px;
   letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .sun:hover {
