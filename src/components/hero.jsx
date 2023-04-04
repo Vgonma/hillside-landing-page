@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/photos/IMG_0073.jpg';
+import photo from '../assets/images/photos/photo_73.jpg';
 
 function Hero() {
   return (
@@ -11,7 +11,7 @@ function Hero() {
         </div>
       </div>
       <div className='hero-image-container left-squiggly'>
-        <img src={image} alt='playground' />
+        <img src={photo} alt='playground' />
       </div>
     </div>
   );
