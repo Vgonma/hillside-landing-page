@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import painting from '../assets/images/photos/painting.jpeg';
 import programa from '../assets/images/titles/NUESTRO-PROGRAMA.svg'
+import moreBtn from '../assets/images/icons/more_1.png';
+import moreBtnHover from '../assets/images/icons/more_2.png';
 
 function Program() {
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <div className='home-section three-panels'>
       <div className='layer2 extend'>
@@ -22,9 +26,15 @@ function Program() {
             aprender.<br/><br/> Basamos el programa en el desarrollo individual de cada
             alumno para lograr conseguir sus metas
           </p>
-          <button className='more' type='button'>
-            More
-          </button>
+          <Link
+            to='/programa'
+            className='more'
+            type='button'
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}  
+          >
+            <img src={isHovering ? moreBtnHover : moreBtn} alt='More' />
+          </Link>
         </div>
         <Link to='contacto' className='visit-panel left-squiggly hover-panel-green'>
           <h6>

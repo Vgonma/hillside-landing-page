@@ -52,6 +52,15 @@ function Footer() {
             </Link>
           </div>
 
+          <div className="info5">
+            <p>
+              <span>Tel: </span>5813 6270 <br />
+              <a href="mailto: info@hillside.com.mx">info@hillside.com.mx</a> <br /> <br />
+              <span>Horarios:</span> <br />
+              8:30 A.M. a 1:30 P.M.
+            </p>
+          </div>
+
 
         </div>
       </div>
