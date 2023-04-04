@@ -422,7 +422,7 @@
 }
 
 .sun:hover {
-  transform: translateY(-60%) scale(1.1);
+  transform: translateY(-60%) scale(1.2);
 }
 
 
@@ -449,5 +449,9 @@
 
   .sun {
     transform: translateY(-70%);
+  }
+
+  .sun:hover {
+    transform: translateY(-70%) scale(1.2);
   }
 }
