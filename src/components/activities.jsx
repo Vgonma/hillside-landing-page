@@ -2,25 +2,29 @@ import React from 'react';
 
 function Activities() {
   return (
-    <div className='home-section'>
+    <div>
       <div className='activities-grid-container'>
         <div className='activities-grid'>
-          <div className='grid-el small'>
-            <h2 className='text-blue'>AfTerScHoOl</h2>
-            <ul className='border-green'>
-              <li>Futbol</li>
-              <li>Regularización</li>
-              <li>Inglés</li>
-              <li>Karate</li>
-            </ul>
-          
-            <h2 className='text-yellow'>EXtrAs</h2>
-            <ul className='border-blue'>
-              <li>Programa de arte- Adaptado al método Doman</li>
-              <li>programam tiendita de logros interpersonal</li>
-              <li>Programa del cuento con sentido</li>
-              <li>Curso de verano</li>
-            </ul>
+          <div className='small grid-el'>
+            <div className='afterschool'>
+              <h2 className='text-blue'>AfTerScHoOl</h2>
+              <ul className='border-green'>
+                <li>Futbol</li>
+                <li>Regularización</li>
+                <li>Inglés</li>
+                <li>Karate</li>
+              </ul>
+            </div>
+
+            <div className='extras'>
+              <h2 className='text-yellow'>EXtrAs</h2>
+              <ul className='border-blue'>
+                <li>Programa de arte- Adaptado al método Doman</li>
+                <li>programam tiendita de logros interpersonal</li>
+                <li>Programa del cuento con sentido</li>
+                <li>Curso de verano</li>
+              </ul>
+            </div>
           </div>
           <div className='grid-el large'>
             <h2 className='text-green'>ActiViDadEs</h2>

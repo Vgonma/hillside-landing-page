@@ -1,15 +1,21 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import instagram from '../assets/images/icons/instagram_icono.svg'
 import facebook from '../assets/images/icons/facebook_icono.svg'
 import logo from '../assets/images/logos/logo-blanco.svg'
 
 function Footer() {
+
+
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <footer className='footer '>
-      <button className='sun'>
+      <Link to='contacto' className='sun'>
         Agenda una visita!
-      </button>
+      </Link>
       <div className='grass top-squiggly-wide bg-green'>
         <div className='footer-info-container'>
           <ul className='info1'>
@@ -34,16 +40,25 @@ function Footer() {
           </ul>
           <div className="info3">
             <a href="#">
-              <img src={instagram} alt="Instagram" />
+              <img className='footer-icon' src={instagram} alt="Instagram" />
             </a>
             <a href="#">
-              <img src={facebook} alt="Facebook" />
+              <img className='footer-icon' src={facebook} alt="Facebook" />
             </a>
           </div>
           <div className="info4">
-            <a href="#">
-              <img src={logo} alt="Hillside Logo" />
-            </a>
+            <Link to='/' onClick={scrollToTop}>
+              <img className='footer-logo' src={logo} alt="Hillside Logo" />
+            </Link>
+          </div>
+
+          <div className="info5">
+            <p>
+              <span>Tel: </span>5813 6270 <br />
+              <a href="mailto: info@hillside.com.mx">info@hillside.com.mx</a> <br /> <br />
+              <span>Horarios:</span> <br />
+              8:30 A.M. a 1:30 P.M.
+            </p>
           </div>
 
 

@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import painting from '../assets/images/photos/painting.jpeg';
+import programa from '../assets/images/titles/NUESTRO-PROGRAMA.svg'
+import moreBtn from '../assets/images/icons/more_1.png';
+import moreBtnHover from '../assets/images/icons/more_2.png';
 
 function Program() {
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <div className='home-section three-panels'>
-      <div className='layer2'>
+      <div className='layer2 extend'>
         <img className='section-image' src={painting} alt='' />
       </div>
       <div className='layer1'>
-        <div className='info-panel right-squiggly'>
+        <div className='program-panel info-panel panel right-squiggly'>
           <div className='title-img-container'>
-            <img src='#' alt='Nosotros' />
+            <img src={programa} alt='Nosotros' />
           </div>
           <h3>Multi-Track</h3>
           <h4>múltiples vías de aprendizaje</h4>
@@ -20,17 +26,23 @@ function Program() {
             aprender.<br/><br/> Basamos el programa en el desarrollo individual de cada
             alumno para lograr conseguir sus metas
           </p>
-          <button className='more' type='button'>
-            More
-          </button>
+          <Link
+            to='/programa'
+            className='more'
+            type='button'
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}  
+          >
+            <img src={isHovering ? moreBtnHover : moreBtn} alt='More' />
+          </Link>
         </div>
-        <div className='visit-panel bg-green left-squiggly'>
-          <h3>
+        <Link to='contacto' className='visit-panel left-squiggly hover-panel-green'>
+          <h6>
             AGENDA UNA
             <br />
             VISITA!
-          </h3>
-        </div>
+          </h6>
+        </Link>
       </div>
     </div>
   );
