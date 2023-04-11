@@ -9,7 +9,7 @@ function Program() {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div className='home-section three-panels'>
+    <div id='programa' className='home-section three-panels'>
       <div className='layer2 extend'>
         <img className='section-image' src={photo} alt='' />
       </div>
