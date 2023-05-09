@@ -70,6 +70,42 @@
   border-color: var(--yellow);
 }
 
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-none {
+  background: none;
+}
+
+.svg-green {
+  filter: invert(35%) sepia(100%) saturate(645%) hue-rotate(106deg) brightness(89%) contrast(95%);
+}
+
+.svg-yellow {
+  filter: invert(59%) sepia(48%) saturate(755%) hue-rotate(350deg) brightness(98%) contrast(96%);
+}
+
+.svg-blue {
+  filter: invert(17%) sepia(30%) saturate(5748%) hue-rotate(201deg) brightness(99%) contrast(85%);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
 .App {
   position: relative;
   min-height: 100vh;
@@ -166,6 +202,7 @@
 }
 
 .hero-image-container > img {
+  aspect-ratio: 16/9;
   height: 100%;
   object-fit: cover;
   position: relative;
@@ -432,7 +469,136 @@
   transform: translateY(-80%) scale(1.2);
 }
 
+.levels-ul {
+  list-style: circle;
+}
 
+.levels-li {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.levels-li > * {
+  pointer-events: none;
+}
+
+.levels-li img {
+  object-fit: none;
+  height: 30px;
+  width: 30px;
+  /* visibility: hidden; */
+}
+
+.levels-li.hovering {
+  background-color: var(--yellow)
+}
+
+.levels-li.hovering img {
+  visibility: visible;
+}
+
+.nuestro-sistema {
+  display: grid;
+  grid-template-columns: 35% 35% 30%;
+}
+
+.nuestro-sistema > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sistema-1 {
+  padding: 3rem;
+}
+
+.sistema-1 > p, .sistema-1 > strong {
+  padding-left: 1.5rem;
+  font-family: 'garetbook';
+  color: var(--blue);
+}
+.sistema-1 > strong {
+  font-weight: bold;
+}
+
+.sistema-2 {
+  margin: 5rem;
+}
+
+.sistema-2 > p {
+  border: 3px solid var(--yellow);
+  border-radius: 15px;
+  padding: 2rem;
+  line-height: 2;
+  text-align: center;
+}
+
+.sistema-3{
+  padding: 0;
+}
+.sistema-3 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-container {
+  grid-column: 1/-1;
+  display: flex;
+  height: 424px;
+
+}
+
+.carousel-section {
+  width: 0;
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carousel-section > a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  height: 3rem;
+  color: white;
+  letter-spacing: 2.5px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carousel-section img {
+  display: none;
+  width: 50%;
+  margin-inline: auto;
+}
+
+.carousel-section p {
+  display: none;
+  pointer-events: none;
+  padding-inline: 20%;
+  text-align: center;
+  line-height: 2;
+  font-weight: bold;
+}
+
+.carousel-section.hovering {
+  flex: 2;
+  background: none;
+}
+
+.carousel-section.hovering img,
+.carousel-section.hovering p {
+  display: block;
+}
 /* --------------------------------------- Media queries --------------------------------------- */
 
 @media only screen and (min-width: 1400px) {
