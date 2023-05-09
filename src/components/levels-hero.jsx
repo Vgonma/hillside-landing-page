@@ -127,7 +127,7 @@ function LevelsHero() {
               <p className='text-green'>
                 Las clases están diseñadas para el Desarrollo del pensamiento
                 lógico y matemático infantil, así como para el desarrollo del
-                lenguaje y comunicación
+                lenguaje y comunicación.
               </p>
             </div>
             <Link to='/contacto' className='bg-green'>
@@ -144,9 +144,8 @@ function LevelsHero() {
                 alt='Shooting Star'
               />
               <p className='text-yellow'>
-                Las clases están diseñadas para el Desarrollo del pensamiento
-                lógico y matemático infantil, así como para el desarrollo del
-                lenguaje y comunicación
+                Buscamos que el alumno se sienta aceptado y querido como en
+                casa, para el excelente desarrollo de su autoestima.
               </p>
             </div>
             <Link to='/contacto' className='bg-yellow hidden'>
@@ -163,9 +162,9 @@ function LevelsHero() {
                 alt='Shooting Star'
               />
               <p className='text-blue'>
-                Las clases están diseñadas para el Desarrollo del pensamiento
-                lógico y matemático infantil, así como para el desarrollo del
-                lenguaje y comunicación
+                Promovemos el orden, la estructura y los límites en todas
+                nuestras actividades, para lograr aprender sin esfuerzo y de
+                manera divertida.
               </p>
             </div>
             <Link to='/contacto' className='bg-blue  hidden'>
@@ -182,9 +181,8 @@ function LevelsHero() {
                 alt='Shooting Star'
               />
               <p className='text-green'>
-                Las clases están diseñadas para el Desarrollo del pensamiento
-                lógico y matemático infantil, así como para el desarrollo del
-                lenguaje y comunicación
+                Desarrollo de la socialización en actividades dinámicas,
+                promoviendo el respeto y la generosidad.
               </p>
             </div>
             <Link to='/contacto' className='bg-green  hidden'>
@@ -201,9 +199,8 @@ function LevelsHero() {
                 alt='Shooting Star'
               />
               <p className='text-yellow'>
-                Las clases están diseñadas para el Desarrollo del pensamiento
-                lógico y matemático infantil, así como para el desarrollo del
-                lenguaje y comunicación
+                Apoyo a padres de familia en situaciones especiales de manejo de
+                conducta o emocionales.
               </p>
             </div>
             <Link to='/contacto' className='bg-yellow  hidden'>
@@ -220,9 +217,8 @@ function LevelsHero() {
                 alt='Shooting Star'
               />
               <p className='text-blue'>
-                Las clases están diseñadas para el Desarrollo del pensamiento
-                lógico y matemático infantil, así como para el desarrollo del
-                lenguaje y comunicación
+                El 100% de nuestros alumnos son admitidos en los colegios de su
+                elección.
               </p>
             </div>
             <Link to='/contacto' className='bg-blue  hidden'>
