@@ -46,6 +46,10 @@
           mask: var(--mask);
 }
 
+.px-5 {
+  padding-inline: 5rem;
+}
+
 .text-green {
   color: var(--green);
 }
@@ -96,6 +100,10 @@
 
 .svg-blue {
   filter: invert(17%) sepia(30%) saturate(5748%) hue-rotate(201deg) brightness(99%) contrast(85%);
+}
+
+.svg-white {
+  filter: brightness(0) invert(1);
 }
 
 .hidden {
@@ -436,9 +444,6 @@
   font-weight: bold;
 }
 
-
-
-
 .footer-icon {
   max-width: 50px;
 }
@@ -479,6 +484,12 @@
   align-items: flex-end;
 }
 
+.levels-li p {
+  font-family: 'pp_telegraf';
+  font-weight: bold;
+  color: var(--blue);
+}
+
 .levels-li > * {
   pointer-events: none;
 }
@@ -487,15 +498,10 @@
   object-fit: none;
   height: 30px;
   width: 30px;
-  /* visibility: hidden; */
 }
 
 .levels-li.hovering {
   background-color: var(--yellow)
-}
-
-.levels-li.hovering img {
-  visibility: visible;
 }
 
 .nuestro-sistema {
@@ -557,6 +563,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  transition: 0.2s ease;
 }
 
 .carousel-section > a {
@@ -598,6 +605,31 @@
 .carousel-section.hovering img,
 .carousel-section.hovering p {
   display: block;
+}
+
+.equipment {
+  grid-template-columns: 1fr 1fr;
+}
+
+.rooms-title-container p {
+  font-family: 'pp_telegraf';
+  color: var(--blue);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.rooms-ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.rooms-li {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-inline: 10%;
 }
 /* --------------------------------------- Media queries --------------------------------------- */
 
