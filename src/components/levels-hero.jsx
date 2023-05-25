@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NivelesT from '../assets/images/titles/NIVELES.svg';
 import star from '../assets/images/bg-icons/doodles-07-white.svg';
+import starColored from '../assets/images/bg-icons/doodles-07-text-color.svg';
 import photo1 from '../assets/images/photos/chocolate-egg.jpg';
 import photo2 from '../assets/images/photos/crayons.png';
 import nuestro_sistema from '../assets/images/titles/NUESTRO-SISTEMA.svg';
 import shootingStar from '../assets/images/bg-icons/doodles-08-text-colored.svg';
+import instalaciones from '../assets/images/titles/INSTALACIONES.svg';
+import interactiveRoom from '../assets/images/photos/interactive-room.jpeg';
 
 function LevelsHero() {
   const [photoNum, setPhotoNum] = useState(0);
@@ -13,6 +16,16 @@ function LevelsHero() {
   function hovering(event, num) {
     event.target.classList.add('hovering');
     setPhotoNum(num);
+  }
+
+  function roomsHovering(event) {
+    event.target.classList.add('hovering');
+    event.target.children[0].classList.add('svg-white');
+  }
+
+  function roomsStopHovering(event) {
+    event.target.classList.remove('hovering');
+    event.target.children[0].classList.remove('svg-white');
   }
 
   function carouselHovering(event) {
@@ -52,36 +65,36 @@ function LevelsHero() {
               onMouseEnter={(e) => hovering(e, 1)}
               onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(1)}>
-              <img src={star} alt='star' />
+              <img className='levels-star' src={star} alt='star' />
               <p> Early Learning </p>
-              <img src={star} alt='star' />
+              <img className='levels-star' src={star} alt='star' />
             </li>
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 2)}
               onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(2)}>
-              <img src={star} alt='star' />
+              <img className='levels-star' src={star} alt='star' />
               <p> pre-Kinder </p>
-              <img src={star} alt='star' />
+              <img className='levels-star' src={star} alt='star' />
             </li>
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 3)}
               onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(3)}>
-              <img src={star} alt='star' />
+              <img className='levels-star' src={star} alt='star' />
               <p> Kinder I </p>
-              <img src={star} alt='star' />
+              <img className='levels-star' src={star} alt='star' />
             </li>
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 4)}
               onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(4)}>
-              <img src={star} alt='star' />
+              <img className='levels-star' src={star} alt='star' />
               <p> Kinder II </p>
-              <img src={star} alt='star' />
+              <img className='levels-star' src={star} alt='star' />
             </li>
           </ul>
         </div>
@@ -226,6 +239,71 @@ function LevelsHero() {
             </Link>
           </div>
         </section>
+      </div>
+
+      <div className='home-section equipment hero'>
+        <div className='hero-image-container right-squiggly'>
+          <img src={interactiveRoom} alt='Interactive Room' />
+        </div>
+        <div className='levels-title-container rooms-title-container'>
+          <img src={instalaciones} alt='Instalaciones' />
+          <p className='px-5'>
+            Cada salón cuenta con material especialmente dirigido para el
+            desarrollo de habilidades y del pensamiento de los alumnos, según su
+            edad
+          </p>
+          <ul className='levels-ul rooms-ul'>
+            <li
+              className='levels-li rooms-li'
+              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseLeave={(e) => roomsStopHovering(e)}>
+              <img src={starColored} alt='star' className='svg-yellow' />
+              <p> Salón de Gym y música </p>
+            </li>
+            <li
+              className='levels-li rooms-li'
+              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseLeave={(e) => roomsStopHovering(e)}>
+              <img src={starColored} alt='star' className='svg-yellow' />
+              <p> Salón para arte </p>
+            </li>
+            <li
+              className='levels-li rooms-li'
+              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseLeave={(e) => roomsStopHovering(e)}>
+              <img src={starColored} alt='star' className='svg-yellow' />
+              <p> Área de juegos </p>
+            </li>
+            <li
+              className='levels-li rooms-li'
+              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseLeave={(e) => roomsStopHovering(e)}>
+              <img src={starColored} alt='star' className='svg-yellow' />
+              <p> Baños con muebles adecuados para su estatura </p>
+            </li>
+            <li
+              className='levels-li rooms-li'
+              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseLeave={(e) => roomsStopHovering(e)}>
+              <img src={starColored} alt='star' className='svg-yellow' />
+              <p> Sensory Room </p>
+            </li>
+            <li
+              className='levels-li rooms-li'
+              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseLeave={(e) => roomsStopHovering(e)}>
+              <img src={starColored} alt='star' className='svg-yellow' />
+              <p> Early Learning Center </p>
+            </li>
+            <li
+              className='levels-li rooms-li'
+              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseLeave={(e) => roomsStopHovering(e)}>
+              <img src={starColored} alt='star' className='svg-yellow' />
+              <p> Huerto </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
