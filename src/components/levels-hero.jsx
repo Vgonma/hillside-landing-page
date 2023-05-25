@@ -265,7 +265,7 @@ function LevelsHero() {
               onMouseEnter={(e) => roomsHovering(e)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
               <img src={starColored} alt='star' className='svg-yellow' />
-              <p> Salón para computación y arte </p>
+              <p> Salón para arte </p>
             </li>
             <li
               className='levels-li rooms-li'

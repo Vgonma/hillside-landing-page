@@ -403,6 +403,10 @@
   margin: 0 2rem 1rem;
 }
 
+.footer-info-container > * {
+  padding-top: 1rem;
+}
+
 .footer-info-container > ul {
   list-style: none;
   display: flex;
@@ -529,7 +533,7 @@
 }
 
 .sistema-2 {
-  margin: 5rem;
+  margin: 2rem;
 }
 
 .sistema-2 > p {
@@ -538,6 +542,7 @@
   padding: 2rem;
   line-height: 2;
   text-align: center;
+  max-width: 435px;
 }
 
 .sistema-3{
@@ -609,9 +614,10 @@
 
 .equipment {
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 3rem;
 }
 
-.rooms-title-container p {
+.rooms-title-container > p {
   font-family: 'pp_telegraf';
   color: var(--blue);
   text-align: center;
@@ -627,7 +633,7 @@
 
 .rooms-li {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
   padding-inline: 10%;
 }
