@@ -13,13 +13,13 @@ function Contact() {
           <input className='text-input' type='email' name='email' />
           <h4>¿Qué te gustaria recibir?</h4>
           <div>
-            <input type='checkbox' name='info' id='checkbox1' />
+            <input type='checkbox' name='info' id='checkbox1' className='checkbox' />
             <label htmlFor='checkbox1'>
               Información sobre horarios, salones, etc.
             </label>
           </div>
           <div>
-            <input type='checkbox' name='visit' id='checkbox2' />
+            <input type='checkbox' name='visit' id='checkbox2' className='checkbox' />
             <label htmlFor='checkbox2'>Me gustaria visitar el kinder</label>
           </div>
           <button className='submit-btn bg-yellow' type='submit'>Enviar</button>

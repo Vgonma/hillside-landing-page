@@ -840,6 +840,11 @@ label {
   border-radius: 5px;
   border: none;
   outline-color: var(--green);
+  height: 35px;
+}
+
+.checkbox {
+  width: 40px;
 }
 
 .text-input-label {
