@@ -27,6 +27,7 @@ function Contact() {
       emailConfig.publicKey
     ).then(()=> {
       alert('Correo enviado correctamente!');
+      event.target.reset;
     }, (error) => {
       alert('Error al enviar correo. Favor de intentarlo de nuevo.');
     })
