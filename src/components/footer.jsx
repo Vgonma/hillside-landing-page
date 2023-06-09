@@ -40,10 +40,10 @@ function Footer() {
             </li>
           </ul>
           <div className="info3">
-            <a href="#">
+            <a href="https://www.instagram.com/hillside.mx/" target='_blank'>
               <img className='footer-icon' src={instagram} alt="Instagram" />
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=100063610312323" target='_blank'>
               <img className='footer-icon' src={facebook} alt="Facebook" />
             </a>
           </div>

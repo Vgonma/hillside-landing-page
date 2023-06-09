@@ -23,9 +23,9 @@ function Navbar() {
         <NavLink className='nav-link' to='niveles'>
           Niveles
         </NavLink>
-        <NavLink className='nav-link' to='personal'>
+        <HashLink className='nav-link' to='nosotros#personal' >
           Personal
-        </NavLink>
+        </HashLink>
         <NavLink className='nav-link' to='contacto'>
           Contacto
         </NavLink>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NosotrosTitle from '../assets/images/titles/NOSOTROS.svg';
-import girl from '../assets/images/photos/smile.jpeg';
-import star from '../assets/images/bg-icons/estrella_full.svg';
-import halloween from '../assets/images/photos/halloween.png';
 import personal from '../assets/images/titles/NUESTRO-PERSONAL.svg';
+import star from '../assets/images/bg-icons/estrella_full.svg';
+import girl from '../assets/images/photos/smile.jpeg';
+import teachers from '../assets/images/photos/personal.jpg';
 
 function Nosotros() {
   return (
@@ -127,7 +127,7 @@ function Nosotros() {
           </div>
           <div className='nuestro-personal-img'>
             <img
-              src={halloween}
+              src={teachers}
               alt='Halloween'
               className='nuestro-personal-title-image'
             />
