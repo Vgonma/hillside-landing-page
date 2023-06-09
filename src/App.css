@@ -49,6 +49,12 @@
 .px-5 {
   padding-inline: 5rem;
 }
+.d-flex {
+  display: flex;
+}
+.pos-relative {
+  position: relative;
+}
 
 .text-green {
   color: var(--green);
@@ -165,31 +171,29 @@
 
 .nav-link{
   font-family: 'pp_telegraf', sans-serif;
+  font-weight: bold;
   text-decoration: none;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 0.3rem;
-  color: var(--green);
+  color: var(--blue);
 }
 
 .nav-link:hover {
-  text-shadow: 1px 0 0 var(--green);
-  transform: rotate(7deg);
+  text-shadow: 1px 0 0 var(--blue);
+  transform: rotate(5deg);
 }
 
 .nav-link:nth-child(even):hover {
-  transform: rotate(-7deg);
+  transform: rotate(-5deg);
 }
 
 .nav-link.active {  
-  background-image: url(./assets/images/mancha.svg); 
-  background-repeat: no-repeat;
-  background-size: contain;
+  color: var(--yellow);
 }
 
 .home-section {
-  aspect-ratio: 16/9;
+  /* aspect-ratio: 16/9; */
+  min-height: 800px;
 }
 .hero {
   display: grid;
@@ -495,13 +499,14 @@
 .levels-li {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
 }
 
 .levels-li p {
   font-family: 'pp_telegraf';
   font-weight: bold;
   color: var(--blue);
+  margin-block: auto;
+  padding-inline: 0.5rem;
 }
 
 .levels-li > * {
@@ -509,7 +514,6 @@
 }
 
 .levels-li img {
-  object-fit: none;
   height: 30px;
   width: 30px;
 }
@@ -658,6 +662,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nosotros-hero-left-text {
@@ -666,11 +671,12 @@
   row-gap: 2rem;
   align-items: center;
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .nosotros-hero-left-text p {
   text-align: center;
+  max-width: 550px;
 }
 
 .band-button {
@@ -680,7 +686,7 @@
   right: 0;
   text-align: center;
   text-decoration: none;
-  height: 3rem;
+  height: 5rem;
   color: white;
   letter-spacing: 2.5px;
   display: flex;
@@ -711,7 +717,7 @@
 }
 
 .mision-vision-img-right {
-  background-image: url(./assets/images/photos/garden-flowers.jpg);
+  background-image: url(./assets/images/photos/vision.jpg);
 }
 
 
@@ -725,7 +731,7 @@
 }
 
 .mision-vision-info {
-  z-index: 100;
+  z-index: 98;
   color: white;
   display: flex;
   flex-direction: column;
@@ -749,6 +755,8 @@
   row-gap: 1.5rem;
   padding: 4rem 2rem;
   text-align: center;
+  margin-inline: auto;
+  max-width: 800px;
 }
 
 .nuestro-personal-info > img {
@@ -758,6 +766,7 @@
 .nuestro-personal-img {
   position: relative;
   color: white;
+  min-height: 900px;
 }
 
 .nuestro-personal-img p {
@@ -765,26 +774,31 @@
   font-weight: normal;
   letter-spacing: 1px;
   text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 1rem;
 }
 
 .nuestro-personal-title-image {
   max-width: none;
-  height: 45%;
   overflow-x: hidden;
   object-fit: cover;
-
 }
 
 .nuestro-personal-title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  top: 30%;
+  top: 50%;
+}
+
+.nuestro-personal-img-container {
+  width: 50%;
+  margin-inline: auto;
 }
 
 .contact-section {
@@ -797,7 +811,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+.contacto-title {
+  max-width: 400px;
+  padding-inline: 2rem;
+  margin-inline: auto;
 }
 
 form {
@@ -809,6 +828,8 @@ form {
   color: white;
   font-size: 1.3rem;
   row-gap: 1rem;
+  max-width: 600px;
+  margin-inline: auto;
 }
 
 label {
@@ -858,6 +879,16 @@ label {
   font-weight: bold;
   color: white;
   letter-spacing: 1px;
+}
+
+/* doodles */
+
+.contact-shooting-star {
+  max-width: 150px;
+  margin-left: 2rem;
+  position: absolute;
+  right: 5%;
+  top: -100%;
 }
 /* --------------------------------------- Media queries --------------------------------------- */
 

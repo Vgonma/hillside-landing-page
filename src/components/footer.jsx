@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import instagram from '../assets/images/icons/instagram_icono.svg'
 import facebook from '../assets/images/icons/facebook_icono.svg'
 import logo from '../assets/images/logos/logo-blanco.svg'
@@ -20,29 +21,29 @@ function Footer() {
         <div className='footer-info-container'>
           <ul className='info1'>
             <li>
-              <NavLink to='nosotros'>Nosotros</NavLink>
+              <HashLink to='nosotros#hero'>Nosotros</HashLink>
             </li>
             <li>
-              <NavLink to='programa'>Programa</NavLink>
+              <HashLink to='/#programa'>Programa</HashLink>
             </li>
             <li>
-              <NavLink to='instalaciones'>Instalaciones</NavLink>
+              <HashLink to='niveles#instalaciones'>Instalaciones</HashLink>
             </li>
           </ul>
 
           <ul className='info2'>
             <li>
-              <NavLink to='personal'>Personal</NavLink>
+              <HashLink to='nosotros#personal'>Personal</HashLink>
             </li>
             <li>
               <NavLink to='contacto'>Contacto</NavLink>
             </li>
           </ul>
           <div className="info3">
-            <a href="#">
+            <a href="https://www.instagram.com/hillside.mx/" target='_blank'>
               <img className='footer-icon' src={instagram} alt="Instagram" />
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=100063610312323" target='_blank'>
               <img className='footer-icon' src={facebook} alt="Facebook" />
             </a>
           </div>
