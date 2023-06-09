@@ -1,12 +1,42 @@
 import React from 'react';
 import contact from '../assets/images/titles/CONTACTO.svg';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  function submitHandler(event) {
+    event.preventDefault();
+    const checkbox1 = document.getElementById('checkbox1');
+    const checkbox2 = document.getElementById('checkbox2');
+
+    const emailConfig = {
+      serviceId: 'service_gymloy6',
+      templateId: 'template_bc99fhn',
+      formData: event.target,
+      publicKey: 'YrJCcDHUnPYHlfgu5',
+      templateParams: {
+        nombre: event.target[0].value,
+        email: event.target[1].value,
+        info: checkbox1.checked ? 'Quiere información sobre horarios, salones, etc.' : '',
+        visit: checkbox2.checked ? 'Le gustaria visitar el kinder.' : ''
+      }
+    }
+    emailjs.send(
+      emailConfig.serviceId,
+      emailConfig.templateId,
+      emailConfig.templateParams,
+      emailConfig.publicKey
+    ).then(()=> {
+      alert('Correo enviado correctamente!');
+    }, (error) => {
+      alert('Error al enviar correo. Favor de intentarlo de nuevo.');
+    })
+  }
+
   return (
     <section className='contact-section'>
       <div className='contact-form-container bg-blue right-squiggly'>
         <img src={contact} alt='Contacto' className='title-img' />
-        <form>
+        <form method='post' onSubmit={(e) => submitHandler(e)}>
           <label className='text-input-label' htmlFor='nombre'>Nombre:</label>
           <input className='text-input' type='text' name='nombre' />
           <label className='text-input-label' htmlFor='email'>E-mail:</label>
