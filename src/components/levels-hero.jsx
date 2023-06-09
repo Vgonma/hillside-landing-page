@@ -12,10 +12,12 @@ import shootingStar from '../assets/images/bg-icons/doodles-08-text-colored.svg'
 import instalaciones from '../assets/images/titles/INSTALACIONES.svg';
 import interactiveRoom from '../assets/images/photos/interactive-room.jpeg';
 
+import gym from '../assets/images/photos/gym.jpg';
 import juegos from '../assets/images/photos/area_juegos.jpg';
 import arte from '../assets/images/photos/arte.jpg';
-import huerto from '../assets/images/photos/huerto.jpg';
+import sensory from '../assets/images/photos/sensory.jpeg';
 import earlyLearningCenter from '../assets/images/photos/early_learning_center.jpg';
+import huerto from '../assets/images/photos/huerto.jpg';
 
 function LevelsHero() {
   
@@ -73,7 +75,7 @@ function LevelsHero() {
   function renderInstalaciones() {
     switch (instalacionesNum) {
       case 1:
-        return <img src={arte} alt='Gym' />;
+        return <img src={gym} alt='Gym' />;
       case 2:
         return <img src={arte} alt='playground' />;
       case 3:
@@ -81,7 +83,7 @@ function LevelsHero() {
       case 4:
         return <img src={juegos} alt='Baños' />;
       case 5:
-        return <img src={juegos} alt='Sensory Room' />;
+        return <img src={sensory} alt='Sensory Room' />;
       case 6:
         return <img src={earlyLearningCenter} alt='Early Learning Center' />;
       case 7:
