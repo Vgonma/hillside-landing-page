@@ -26,6 +26,10 @@ button {
   cursor: pointer;
 }
 
+iframe {
+  border: none;
+}
+
 #root {
   min-height: 100vh;
 }
