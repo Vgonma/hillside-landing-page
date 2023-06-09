@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import photo from '../assets/images/photos/photo_43.jpg';
 import programa from '../assets/images/titles/NUESTRO-PROGRAMA.svg'
 import moreBtn from '../assets/images/icons/more_1.png';
@@ -26,15 +27,15 @@ function Program() {
             aprender.<br/><br/> Basamos el programa en el desarrollo individual de cada
             alumno para lograr conseguir sus metas
           </p>
-          <Link
-            to='/programa'
+          <HashLink
+            to='/niveles#sistema'
             className='more'
             type='button'
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}  
           >
             <img src={isHovering ? moreBtnHover : moreBtn} alt='More' />
-          </Link>
+          </HashLink>
         </div>
         <Link to='contacto' className='visit-panel left-squiggly hover-panel-green'>
           <h6>

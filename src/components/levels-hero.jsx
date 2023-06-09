@@ -1,26 +1,36 @@
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 import { Link } from 'react-router-dom';
 import NivelesT from '../assets/images/titles/NIVELES.svg';
-import star from '../assets/images/bg-icons/doodles-07-white.svg';
-import starColored from '../assets/images/bg-icons/doodles-07-text-color.svg';
-import photo1 from '../assets/images/photos/chocolate-egg.jpg';
-import photo2 from '../assets/images/photos/crayons.png';
+import star from '../assets/images/bg-icons/doodles-07.svg';
+import earlyLearning from '../assets/images/photos/early_learning_nivel.jpg';
+import preKinder from '../assets/images/photos/pre_kinder.jpg';
+import kinder1 from '../assets/images/photos/kinder_1.jpg';
+import kinder2 from '../assets/images/photos/kinder_2.jpg';
+import sistemaImage from '../assets/images/photos/sistema.jpg';
 import nuestro_sistema from '../assets/images/titles/NUESTRO-SISTEMA.svg';
 import shootingStar from '../assets/images/bg-icons/doodles-08-text-colored.svg';
 import instalaciones from '../assets/images/titles/INSTALACIONES.svg';
 import interactiveRoom from '../assets/images/photos/interactive-room.jpeg';
 
+import juegos from '../assets/images/photos/area_juegos.jpg';
+import arte from '../assets/images/photos/arte.jpg';
+import huerto from '../assets/images/photos/huerto.jpg';
+import earlyLearningCenter from '../assets/images/photos/early_learning_center.jpg';
+
 function LevelsHero() {
+  
   const [photoNum, setPhotoNum] = useState(0);
+  const [instalacionesNum, setInstalacionesNum] = useState(0);
 
   function hovering(event, num) {
     event.target.classList.add('hovering');
     setPhotoNum(num);
   }
 
-  function roomsHovering(event) {
+  function roomsHovering(event, num) {
     event.target.classList.add('hovering');
     event.target.children[0].classList.add('svg-white');
+    setInstalacionesNum(num);
   }
 
   function roomsStopHovering(event) {
@@ -48,15 +58,42 @@ function LevelsHero() {
   function renderPhoto() {
     switch (photoNum) {
       case 1:
-        return <img src={photo1} alt='playground' />;
+        return <img src={earlyLearning} alt='Early Learning' />;
+      case 2:
+        return <img src={preKinder} alt='Pre Kinder' />;
+      case 3:
+        return <img src={kinder1} alt='Kinder I' />;
+      case 4:
+        return <img src={kinder2} alt='Kinder II' />;
       default:
-        return <img src={photo2} alt='playground' />;
+        return <img src={earlyLearning} alt='Early Learning' />;
+    }
+  }
+
+  function renderInstalaciones() {
+    switch (instalacionesNum) {
+      case 1:
+        return <img src={arte} alt='Gym' />;
+      case 2:
+        return <img src={arte} alt='playground' />;
+      case 3:
+        return <img src={juegos} alt='Area de Juegos' />;
+      case 4:
+        return <img src={juegos} alt='Baños' />;
+      case 5:
+        return <img src={juegos} alt='Sensory Room' />;
+      case 6:
+        return <img src={earlyLearningCenter} alt='Early Learning Center' />;
+      case 7:
+        return <img src={huerto} alt='Huerto' />;
+      default:
+        return <img src={arte} alt='Gym' />;
     }
   }
 
   return (
     <>
-      <div className='home-section hero'>
+      <div className='home-section hero' id='hero'>
         <div className='levels-title-container'>
           <img src={NivelesT} alt='Niveles' />
           <ul className='levels-ul'>
@@ -65,36 +102,36 @@ function LevelsHero() {
               onMouseEnter={(e) => hovering(e, 1)}
               onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(1)}>
-              <img className='levels-star' src={star} alt='star' />
+              <img className='levels-star svg-white' src={star} alt='star' />
               <p> Early Learning </p>
-              <img className='levels-star' src={star} alt='star' />
+              <img className='levels-star svg-white' src={star} alt='star' />
             </li>
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 2)}
               onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(2)}>
-              <img className='levels-star' src={star} alt='star' />
+              <img className='levels-star svg-white' src={star} alt='star' />
               <p> pre-Kinder </p>
-              <img className='levels-star' src={star} alt='star' />
+              <img className='levels-star svg-white' src={star} alt='star' />
             </li>
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 3)}
               onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(3)}>
-              <img className='levels-star' src={star} alt='star' />
+              <img className='levels-star svg-white' src={star} alt='star' />
               <p> Kinder I </p>
-              <img className='levels-star' src={star} alt='star' />
+              <img className='levels-star svg-white' src={star} alt='star' />
             </li>
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 4)}
               onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(4)}>
-              <img className='levels-star' src={star} alt='star' />
+              <img className='levels-star svg-white' src={star} alt='star' />
               <p> Kinder II </p>
-              <img className='levels-star' src={star} alt='star' />
+              <img className='levels-star svg-white' src={star} alt='star' />
             </li>
           </ul>
         </div>
@@ -103,7 +140,7 @@ function LevelsHero() {
         </div>
       </div>
 
-      <div className='home-section nuestro-sistema'>
+      <div className='home-section nuestro-sistema' id='sistema'>
         <div className='sistema-1'>
           <img src={nuestro_sistema} alt='Nuestro Sistema' />
           <strong>Sistema constructivista</strong>
@@ -121,7 +158,7 @@ function LevelsHero() {
         </div>
         <div className='sistema-3'>
           <img
-            src={photo1}
+            src={sistemaImage}
             alt='Foto de Nuestro sistema'
             className='left-squiggly'
           />
@@ -241,9 +278,9 @@ function LevelsHero() {
         </section>
       </div>
 
-      <div className='home-section equipment hero'>
+      <div className='home-section equipment hero' id='instalaciones'>
         <div className='hero-image-container right-squiggly'>
-          <img src={interactiveRoom} alt='Interactive Room' />
+          {renderInstalaciones()}
         </div>
         <div className='levels-title-container rooms-title-container'>
           <img src={instalaciones} alt='Instalaciones' />
@@ -255,51 +292,51 @@ function LevelsHero() {
           <ul className='levels-ul rooms-ul'>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseEnter={(e) => roomsHovering(e, 1)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={starColored} alt='star' className='svg-yellow' />
+              <img src={star} alt='star' className='svg-yellow' />
               <p> Salón de Gym y música </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseEnter={(e) => roomsHovering(e, 2)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={starColored} alt='star' className='svg-yellow' />
+              <img src={star} alt='star' className='svg-yellow' />
               <p> Salón para arte </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseEnter={(e) => roomsHovering(e, 3)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={starColored} alt='star' className='svg-yellow' />
+              <img src={star} alt='star' className='svg-yellow' />
               <p> Área de juegos </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseEnter={(e) => roomsHovering(e, 4)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={starColored} alt='star' className='svg-yellow' />
+              <img src={star} alt='star' className='svg-yellow' />
               <p> Baños con muebles adecuados para su estatura </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseEnter={(e) => roomsHovering(e, 5)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={starColored} alt='star' className='svg-yellow' />
+              <img src={star} alt='star' className='svg-yellow' />
               <p> Sensory Room </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseEnter={(e) => roomsHovering(e, 6)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={starColored} alt='star' className='svg-yellow' />
+              <img src={star} alt='star' className='svg-yellow' />
               <p> Early Learning Center </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e)}
+              onMouseEnter={(e) => roomsHovering(e, 7)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={starColored} alt='star' className='svg-yellow' />
+              <img src={star} alt='star' className='svg-yellow' />
               <p> Huerto </p>
             </li>
           </ul>

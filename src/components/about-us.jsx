@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import photo from '../assets/images/photos/photo_63.jpg';
 import nosotros from '../assets/images/titles/NOSOTROS.svg';
 import moreBtn from '../assets/images/icons/more_1.png';
@@ -35,15 +36,15 @@ function AboutUs() {
             hasta convertirse en 10 que es hoy; nuestro programa que consta de
             la fusiön de los mejores métodos de aprendizaje.
           </p>
-          <Link
-            to='nosotros'
+          <HashLink
+            to='nosotros#hero'
             className='more'
             type='button'
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}  
           >
             <img src={isHovering ? moreBtnHover : moreBtn} alt='More' />
-          </Link>
+          </HashLink>
         </div>
       </div>
     </div>

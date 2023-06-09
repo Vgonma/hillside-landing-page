@@ -4,15 +4,15 @@ import NosotrosTitle from '../assets/images/titles/NOSOTROS.svg';
 import girl from '../assets/images/photos/smile.jpeg';
 import star from '../assets/images/bg-icons/estrella_full.svg';
 import halloween from '../assets/images/photos/halloween.png';
-import personal from '../assets/images/titles/NOSOTROS.svg';
+import personal from '../assets/images/titles/NUESTRO-PERSONAL.svg';
 
 function Nosotros() {
   return (
     <>
-      <section className='home-section nosotros-hero'>
+      <section className='home-section nosotros-hero' id='hero'>
         <div className='nosotros-hero-left'>
           <div className='nosotros-hero-left-text'>
-            <img src={NosotrosTitle} alt='Nosotros' className='title-img' />
+            <img src={NosotrosTitle} alt='Nosotros' className='' />
             <p>
               Hillside School fue fundado hace 26 años por Martha Saenz
               Castillo, educadora y maestra en Estados Unidos y México, quien al
@@ -86,7 +86,7 @@ function Nosotros() {
         </div>
       </section>
 
-      <section>
+      <section id='personal'>
         <div className='nuestro-personal-container'>
           <div className='nuestro-personal-info'>
             <img src={star} alt='Star' className='svg-yellow' />
@@ -132,15 +132,15 @@ function Nosotros() {
               className='nuestro-personal-title-image'
             />
             <div className='nuestro-personal-title-container bg-blue top-squiggly-wide'>
-              <div className='title-img-container'>
+              <div className='nuestro-personal-img-container'>
                 <img
                   src={personal}
                   alt='Nuestro Personal'
-                  className='title-img'
+                  className=''
                 />
               </div>
               <p>
-                "Los maestros aprendemos de los alumnos y ellos de nosotros"
+                "Los maestros aprendemos de los alumnos<br/> y ellos de nosotros"
               </p>
             </div>
           </div>
