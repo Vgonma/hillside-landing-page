@@ -13,8 +13,9 @@ import instalaciones from '../assets/images/titles/INSTALACIONES.svg';
 import interactiveRoom from '../assets/images/photos/interactive-room.jpeg';
 
 import gym from '../assets/images/photos/gym.jpg';
-import juegos from '../assets/images/photos/area_juegos.jpg';
 import arte from '../assets/images/photos/arte.jpg';
+import juegos from '../assets/images/photos/area_juegos.jpg';
+import banos from '../assets/images/photos/kinder_bano.jpg';
 import sensory from '../assets/images/photos/sensory.jpeg';
 import earlyLearningCenter from '../assets/images/photos/early_learning_center.jpg';
 import huerto from '../assets/images/photos/huerto.jpg';
@@ -81,7 +82,7 @@ function LevelsHero() {
       case 3:
         return <img src={juegos} alt='Area de Juegos' />;
       case 4:
-        return <img src={juegos} alt='Baños' />;
+        return <img src={banos} alt='Baños' />;
       case 5:
         return <img src={sensory} alt='Sensory Room' />;
       case 6:

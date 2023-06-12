@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import NosotrosTitle from '../assets/images/titles/NOSOTROS.svg';
 import personal from '../assets/images/titles/NUESTRO-PERSONAL.svg';
 import star from '../assets/images/bg-icons/estrella_full.svg';
-import girl from '../assets/images/photos/smile.jpeg';
+import girl from '../assets/images/photos/nosotros.jpg';
 import teachers from '../assets/images/photos/personal.jpg';
 
 function Nosotros() {
