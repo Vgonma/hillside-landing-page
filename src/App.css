@@ -247,8 +247,6 @@
   max-width: 30%;
 }
 
-
-
 .visit-panel {
   background-color: #134b8b;
   color: white;
@@ -263,6 +261,10 @@
   text-decoration: none;
 }
 
+.visit-panel:hover {
+  cursor: url(./assets/images/pointers/mouse_big.png), pointer;
+}
+
 .hover-panel {
   transition: background-color 0.3s ease;
 }
@@ -274,7 +276,6 @@
 .hover-panel-green {
   background-color: rgba(7, 137, 68, 0.5);
   transition: background-color 0.3s ease;
-
 }
 
 .hover-panel-green:hover {
@@ -802,12 +803,14 @@
 }
 
 .contact-section {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+  height: calc(100dvh - 260px);
 }
 
 .contact-form-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -879,6 +882,18 @@ label {
   font-weight: bold;
   color: white;
   letter-spacing: 1px;
+}
+
+.whatsapp {
+  position: fixed;
+  left: 1.7rem;
+  bottom: 235px;
+  width: 60px;
+  z-index: inherit;
+}
+
+.whatsapp:hover {
+  transform: translateY(-5px);
 }
 
 /* doodles */
