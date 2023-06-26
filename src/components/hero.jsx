@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import play from '../assets/images/photos/hillside_play.jpg';
-import grow from '../assets/images/photos/hillside_grow.jpg';
+import grow from '../assets/images/photos/hillside_grow.jpeg';
 import learn from '../assets/images/photos/hillside_learn.jpg';
 
 function Hero() {

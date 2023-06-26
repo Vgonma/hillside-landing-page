@@ -898,11 +898,6 @@ label {
     max-width: none;
     column-gap: 4rem;
   }
-
-  .small.grid-el {
-    justify-content: flex-end;
-    column-gap: 1rem;
-  }
 }
 
 @media only screen and (max-width: 1000px) {
