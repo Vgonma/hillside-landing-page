@@ -5,6 +5,9 @@ import personal from '../assets/images/titles/NUESTRO-PERSONAL.svg';
 import star from '../assets/images/bg-icons/estrella_full.svg';
 import girl from '../assets/images/photos/nosotros.jpg';
 import teachers from '../assets/images/photos/personal.jpg';
+import nuestro_sistema from '../assets/images/titles/NUESTRO-SISTEMA.svg';
+import sistemaImage from '../assets/images/photos/sistema.jpg';
+
 
 function Nosotros() {
   return (
@@ -23,21 +26,7 @@ function Nosotros() {
               fusión de los mejores métodos de aprendizaje, tales como Waldorf,
               Montesori y Tradicional.
             </p>
-            <p>
-              Nuestro equipo cuenta con una gran experiencia educativa y es
-              capacitado constantemente para estar siempre a la vanguardia.
-              Nuestras instalaciones ofrecen salones diseñados para pequeños
-              grupos, creando así, un ambiente de aprendizaje individual e
-              integral. Contamos con un amplio jardín que es una extensión de
-              las clases, donde los alumnos pasan gran parte de su día y crean
-              comunidad. Nuestro material y actividades educativos están
-              cuidadosamente seleccionados para impulsar el aprendizaje mediante
-              el juego diverso, dándoles a los alumnos la oportunidad de
-              manipular, cambiar, combinar y rediseñar de maneras infinitas.
-              Nuestras generaciones siempre han tenido abiertas las puertas de
-              los mejores colegios en México ya que están conformadas por
-              alumnos integros, sociales y talentosos.
-            </p>
+
             <p>
               En Hillside School proponemos un ambiente equilibrado entre el
               desarrollo de las habilidades académicas y el crecimiento
@@ -58,94 +47,32 @@ function Nosotros() {
         </div>
       </section>
 
-      <section className='mision-vision'>
-        <div className='mision-vision-side-container mision-vision-img-left'>
-          <div className='color bg-blue'></div>
-          <div className='mision-vision-info'>
-            <h2 className='mision-vision-title'>MISIÓN</h2>
-            <p>
-              Aprovechar el interés, la curiosidad y la creatividad, ¬únicos en
-              los niños, como la fuerza impulsora detrás de su aprendizaje
-              intelectual. Simultáneamente enfocándonos en la autorregulación
-              emocional, la perseverancia, el pensamiento crítico, el dominio de
-              las habilidades interpersonales y el desarrollo del carácter a lo
-              largo de sus primeros años
-            </p>
-          </div>
+      <section className='home-section nuestro-sistema' id='sistema'>
+      <div className='sistema-1'>
+          <img src={nuestro_sistema} alt='Nuestro Sistema' />
+          <strong>Sistema constructivista</strong>
+          <p>alumno como elemento central</p>
         </div>
-        <div className='mision-vision-side-container mision-vision-img-right'>
-          <div className='color bg-yellow'></div>
-          <div className='mision-vision-info'>
-            <h2 className='mision-vision-title'>VISIÓN</h2>
-            <p>
-              Brindar a nuestros alumnos, múltiples herramientas de aprendizaje
-              que les proporcionen habilidades sociales, emocionales y
-              académicas invaluables para el resto de su vida.
-            </p>
-          </div>
+        <div className='sistema-2 border-yellow'>
+          <p>
+            Concibe al alumno como elemento central del proceso de aprendizaje.
+            Se adapta a sus necesidades según el contexto, tomando en cuenta de
+            manera integral sus diferencia individuales, intereses personales,
+            actitudes, creencias y estilo de aprendizaje. Asegura aprendizajes
+            significativos y perdurables, a través de la observación, que
+            favorecen la autonomía y la resolución creativa de problemas
+          </p>
+        </div>
+        <div className='sistema-3'>
+          <img
+            src={sistemaImage}
+            alt='Foto de Nuestro sistema'
+            className='left-squiggly'
+          />
         </div>
       </section>
 
-      <section id='personal'>
-        <div className='nuestro-personal-container'>
-          <div className='nuestro-personal-info'>
-            <img src={star} alt='Star' className='svg-yellow' />
-            <p>
-              Contamos con personal altamente capacitado y titulado en el área
-              de enseñanza infanti
-            </p>
-            <p>
-              Realizamos evaluaciones individuales quincenales (internas) para
-              observar y analizar cuidadosamente los avances de cada alumno
-            </p>
-            <p>
-              Durante el ciclo escolar se llevan a cabo 3 entrevistas con padres
-              de familia.
-            </p>
-            <p>
-              Atendemos problemas de conducta, desarrollo, lenguaje, dificultad
-              de aprendizaje y sociabilización
-            </p>
-            <p>
-              En los grupos de Prekinder contamos con Maestra Titular y una
-              ayudante
-            </p>
-            <p>
-              Personal de Seguridad en la puerta principal que controla la
-              entrada y salida en todo momento para garantizar la seguridad de
-              los niños
-            </p>
-            <p>
-              Las maestras recogen y entregan a los alumnos directamente en su
-              vehículo
-            </p>
-            <p>
-              Personal auxiliar (nanitas). Apoyo en entrenamiento de control de
-              esfínteres.
-            </p>
-            <img src={star} alt='Star' className='svg-yellow' />
-          </div>
-          <div className='nuestro-personal-img'>
-            <img
-              src={teachers}
-              alt='Halloween'
-              className='nuestro-personal-title-image'
-            />
-            <div className='nuestro-personal-title-container bg-blue top-squiggly-wide'>
-              <div className='nuestro-personal-img-container'>
-                <img
-                  src={personal}
-                  alt='Nuestro Personal'
-                  className=''
-                />
-              </div>
-              <p>
-                "Los maestros aprendemos de los alumnos<br/> y ellos de nosotros"
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 }
