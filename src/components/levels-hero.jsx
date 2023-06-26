@@ -8,12 +8,11 @@ import kinder1 from '../assets/images/photos/kinder_1.jpg';
 import kinder2 from '../assets/images/photos/kinder_2.jpg';
 import shootingStar from '../assets/images/bg-icons/doodles-08-text-colored.svg';
 import instalaciones from '../assets/images/titles/INSTALACIONES.svg';
-import interactiveRoom from '../assets/images/photos/interactive-room.jpeg';
-import sistemaImage from '../assets/images/photos/sistema.jpg';
-import nuestro_sistema from '../assets/images/titles/NUESTRO-SISTEMA.svg';
 
+
+// Instalaciones image imports
 import gym from '../assets/images/photos/gym.jpg';
-import arte from '../assets/images/photos/arte.jpg';
+import arte from '../assets/images/photos/art_class.jpeg';
 import juegos from '../assets/images/photos/area_juegos.jpg';
 import banos from '../assets/images/photos/kinder_bano.jpg';
 import sensory from '../assets/images/photos/sensory.jpeg';
@@ -258,28 +257,28 @@ function LevelsHero() {
               onMouseEnter={(e) => roomsHovering(e, 1)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
               <img src={star} alt='star' className='svg-yellow' />
-              <p> Salón de Gym y música </p>
+              <p> Gym al aire libre </p>
             </li>
             <li
               className='levels-li rooms-li'
               onMouseEnter={(e) => roomsHovering(e, 2)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
               <img src={star} alt='star' className='svg-yellow' />
-              <p> Salón para arte </p>
+              <p> Arte al aire libre </p>
             </li>
             <li
               className='levels-li rooms-li'
               onMouseEnter={(e) => roomsHovering(e, 3)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
               <img src={star} alt='star' className='svg-yellow' />
-              <p> Área de juegos </p>
+              <p> Ludoteca </p>
             </li>
             <li
               className='levels-li rooms-li'
               onMouseEnter={(e) => roomsHovering(e, 4)}
               onMouseLeave={(e) => roomsStopHovering(e)}>
               <img src={star} alt='star' className='svg-yellow' />
-              <p> Baños con muebles adecuados para su estatura </p>
+              <p> Salón de música </p>
             </li>
             <li
               className='levels-li rooms-li'
