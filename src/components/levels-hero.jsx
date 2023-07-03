@@ -9,7 +9,6 @@ import kinder2 from '../assets/images/photos/kinder_2.jpg';
 import shootingStar from '../assets/images/bg-icons/doodles-08-text-colored.svg';
 import instalaciones from '../assets/images/titles/INSTALACIONES.svg';
 
-
 // Instalaciones image imports
 import gym from '../assets/images/photos/gym.jpg';
 import arte from '../assets/images/photos/art_class.jpeg';
@@ -24,19 +23,21 @@ function LevelsHero() {
   const [instalacionesNum, setInstalacionesNum] = useState(0);
 
   function hovering(event, num) {
+    Array.from(event.target.parentNode.children).forEach((el) =>
+      el.classList.remove('hovering')
+    );
     event.target.classList.add('hovering');
     setPhotoNum(num);
   }
 
   function roomsHovering(event, num) {
+    Array.from(event.target.parentNode.children).forEach((el) => {
+      el.classList.remove('hovering');
+      el.children[0].classList.remove('svg-white');
+    });
     event.target.classList.add('hovering');
     event.target.children[0].classList.add('svg-white');
     setInstalacionesNum(num);
-  }
-
-  function roomsStopHovering(event) {
-    event.target.classList.remove('hovering');
-    event.target.children[0].classList.remove('svg-white');
   }
 
   function carouselHovering(event) {
@@ -50,10 +51,6 @@ function LevelsHero() {
         el.children[1].classList.add('hidden');
       }
     });
-  }
-
-  function stopHovering(event) {
-    event.target.classList.remove('hovering');
   }
 
   function renderPhoto() {
@@ -88,7 +85,7 @@ function LevelsHero() {
       case 7:
         return <img src={huerto} alt='Huerto' />;
       default:
-        return <img src={arte} alt='Gym' />;
+        return <img src={gym} alt='Gym' />;
     }
   }
 
@@ -99,9 +96,8 @@ function LevelsHero() {
           <img src={NivelesT} alt='Niveles' />
           <ul className='levels-ul'>
             <li
-              className='levels-li'
+              className='levels-li hovering'
               onMouseEnter={(e) => hovering(e, 1)}
-              onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(1)}>
               <img className='levels-star svg-white' src={star} alt='star' />
               <p> Early Learning </p>
@@ -110,7 +106,6 @@ function LevelsHero() {
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 2)}
-              onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(2)}>
               <img className='levels-star svg-white' src={star} alt='star' />
               <p> Pre-Kinder </p>
@@ -119,7 +114,6 @@ function LevelsHero() {
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 3)}
-              onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(3)}>
               <img className='levels-star svg-white' src={star} alt='star' />
               <p> Kinder I </p>
@@ -128,7 +122,6 @@ function LevelsHero() {
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 4)}
-              onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(4)}>
               <img className='levels-star svg-white' src={star} alt='star' />
               <p> Kinder II </p>
@@ -167,8 +160,8 @@ function LevelsHero() {
               alt='Shooting Star'
             />
             <p className='text-yellow'>
-              Buscamos que el alumno se sienta aceptado y querido como en casa,
-              para el excelente desarrollo de su autoestima.
+              El Hillside propone un ambiente equilibrado entre el desarrollo de
+              las habilidades académicas y el crecimiento socioemocional.
             </p>
           </div>
           <Link to='/contacto' className='bg-yellow hidden'>
@@ -196,8 +189,9 @@ function LevelsHero() {
           <div>
             <img className='svg-green' src={shootingStar} alt='Shooting Star' />
             <p className='text-green'>
-              Desarrollo de la socialización en actividades dinámicas,
-              promoviendo el respeto y la generosidad.
+              Las generaciones graduadas de Hillside School, siempre han tenido
+              abiertas las puertas de los mejores colegios en México ya que
+              están conformadas por alumnos íntegros, sociales y talentosos.
             </p>
           </div>
           <Link to='/contacto' className='bg-green  hidden'>
@@ -228,8 +222,8 @@ function LevelsHero() {
           <div>
             <img className='svg-blue' src={shootingStar} alt='Shooting Star' />
             <p className='text-blue'>
-              El 100% de nuestros alumnos son admitidos en los colegios de su
-              elección.
+              El equipo docente cuenta con una gran experiencia educativa y es
+              capacitado constantemente para estar siempre a la vanguardia.
             </p>
           </div>
           <Link to='/contacto' className='bg-blue  hidden'>
@@ -253,51 +247,44 @@ function LevelsHero() {
           </p>
           <ul className='levels-ul rooms-ul'>
             <li
-              className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 1)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={star} alt='star' className='svg-yellow' />
+              className='levels-li rooms-li hovering'
+              onMouseEnter={(e) => roomsHovering(e, 1)}>
+              <img src={star} alt='star' className='svg-yellow svg-white' />
               <p> Gym al aire libre </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 2)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 2)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Arte al aire libre </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 3)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 3)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Ludoteca </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 4)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 4)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Salón de música </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 5)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 5)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Sensory Room </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 6)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 6)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Early Learning Center </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 7)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 7)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Huerto </p>
             </li>
