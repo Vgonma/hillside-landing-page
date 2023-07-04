@@ -49,9 +49,23 @@
 .px-5 {
   padding-inline: 5rem;
 }
+
 .d-flex {
   display: flex;
 }
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .pos-relative {
   position: relative;
 }
@@ -126,6 +140,16 @@
 
 .z-1 {
   z-index: -1;
+}
+
+.between-star {
+  width: 10px;
+  height: 10px;
+}
+
+.list-star {
+  width: 10px;
+  height: 10px;
 }
 
 .App {
@@ -532,32 +556,35 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .sistema-1 {
   padding: 3rem;
 }
 
-.sistema-1 > p, .sistema-1 > strong {
-  padding-left: 1.5rem;
+.sistema-1 > p {
   font-family: 'garetbook';
   color: var(--blue);
-}
-.sistema-1 > strong {
-  font-weight: bold;
+  margin-top: 1rem;
 }
 
 .sistema-2 {
   margin: 2rem;
 }
 
-.sistema-2 > p {
-  border: 3px solid var(--yellow);
+.sistema-2 > ul {
+  display: grid;
   border-radius: 15px;
   padding: 2rem;
-  line-height: 2;
+  /* max-width: 435px; */
+  justify-items: center;
+}
+
+.sistema-2 > ul > li {
+  margin-block: 0.5rem;
+  list-style: none;
   text-align: center;
-  max-width: 435px;
 }
 
 .sistema-3{
@@ -643,7 +670,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .rooms-li {

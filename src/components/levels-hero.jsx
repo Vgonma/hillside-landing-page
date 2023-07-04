@@ -239,11 +239,10 @@ function LevelsHero() {
         <div className='levels-title-container rooms-title-container'>
           <img src={instalaciones} alt='Instalaciones' />
           <p className='px-5'>
-            Nuestras instalaciones ofrecen salones diseñados para pequeños
-            grupos, creando así, un ambiente de aprendizaje individual e
-            integral. Contamos con un amplio jardín que es una extensión de las
-            clases, donde los alumnos pasan gran parte de su día y crean
-            comunidad.
+            Las instalaciones ofrecen salones diseñados para pequeños grupos,
+            creando así, un ambiente de aprendizaje individual e integral.
+            Cuenta con un amplio jardín que es una extensión de las clases,
+            donde los alumnos pasan gran parte de su día y crean comunidad.
           </p>
           <ul className='levels-ul rooms-ul'>
             <li

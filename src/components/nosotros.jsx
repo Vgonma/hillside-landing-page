@@ -5,8 +5,9 @@ import personal from '../assets/images/titles/NUESTRO-PERSONAL.svg';
 import star from '../assets/images/bg-icons/estrella_full.svg';
 import girl from '../assets/images/photos/nosotros.jpg';
 import teachers from '../assets/images/photos/personal.jpg';
-import nuestro_sistema from '../assets/images/titles/NUESTRO-SISTEMA.svg';
+import nuestroPrograma from '../assets/images/titles/NUESTRO-PROGRAMA.svg';
 import sistemaImage from '../assets/images/photos/sistema.jpg';
+import listStar from '../assets/images/bg-icons/doodles-07.svg';
 
 function Nosotros() {
   return (
@@ -41,19 +42,37 @@ function Nosotros() {
 
       <section className='home-section nuestro-sistema' id='sistema'>
         <div className='sistema-1'>
-          <img src={nuestro_sistema} alt='Nuestro Sistema' />
-          <strong>Sistema constructivista</strong>
-          <p>alumno como elemento central</p>
+          <img src={nuestroPrograma} alt='Nuestro Sistema' />
+          <h3>Multi - Track</h3>
+          <h4>SKILLS FOR LIFE</h4>
+          <p className='text-center'>
+            El Hillside fomenta habilidades para toda la vida.
+          </p>
         </div>
         <div className='sistema-2 border-yellow'>
-          <p>
-            Concibe al alumno como elemento central del proceso de aprendizaje.
-            Se adapta a sus necesidades según el contexto, tomando en cuenta de
-            manera integral sus diferencia individuales, intereses personales,
-            actitudes, creencias y estilo de aprendizaje. Asegura aprendizajes
-            significativos y perdurables, a través de la observación, que
-            favorecen la autonomía y la resolución creativa de problemas
-          </p>
+          <ul className='border-yellow'>
+            <img src={listStar} alt='star' className='svg-yellow between-star' />
+            <li className='d-flex align-center'>Aptitudes para convertirse en personas más capaces y felices.</li>
+            <img src={listStar} alt='star' className='svg-yellow between-star' />
+            <li>Autorregulación emocional.</li>
+            <img src={listStar} alt='star' className='svg-yellow between-star' />
+            <li>Construcción de relaciones sanas y resolución de conflictos</li>
+            <img src={listStar} alt='star' className='svg-yellow between-star' />
+            <li>
+              Desarrollo de una buena autoestima a medida que van tomando sus
+              propias decisiones.
+            </li>
+            <img src={listStar} alt='star' className='svg-yellow between-star' />
+            <li>
+              Explorar, identificar, tomar riesgos y crear conciencia de su
+              entorno
+            </li>
+            <img src={listStar} alt='star' className='svg-yellow between-star' />
+            <li>Desarrollo del lenguaje y comunicación.</li>
+            <img src={listStar} alt='star' className='svg-yellow between-star' />
+            <li>Adaptación escolar y aprendizaje académico.</li>
+            <img src={listStar} alt='star' className='svg-yellow between-star' />
+          </ul>
         </div>
         <div className='sistema-3'>
           <img
