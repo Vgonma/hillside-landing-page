@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import photo from '../assets/images/photos/photo_43.jpg';
-import programa from '../assets/images/titles/NUESTRO-PROGRAMA.svg'
+import programa from '../assets/images/titles/NUESTRO-PROGRAMA.svg';
 import moreBtn from '../assets/images/icons/more_1.png';
 import moreBtnHover from '../assets/images/icons/more_2.png';
 
@@ -19,25 +19,29 @@ function Program() {
           <div className='title-img-container'>
             <img src={programa} alt='Nosotros' />
           </div>
-          <h3>Multi-Track</h3>
-          <h4>múltiples vías de aprendizaje</h4>
+          <h3>Multi - Track</h3>
+          <h4>(múltiples vías de aprendizaje)</h4>
           <p>
-            Una gran educación comienza con un gran programa académico; es por
-            eso que promovemos la curiosidad intelectual para lograr el amor por
-            aprender.<br/><br/> Basamos el programa en el desarrollo individual de cada
-            alumno para lograr conseguir sus metas
+            Con 26 años de experiencia y habiendo trabajado con distintos
+            modelos educativos, fomentamos el aprendizaje natural e
+            independiente por medio del juego, los sentidos, el pensamiento
+            crítico, la conciencia del entorno, el trabajo en equipo y la
+            autorregulación de las emociones. Sabemos que el desarrollo de los
+            niños es óptimo al integrar diferentes métodos de aprendizaje
+            (Constructivista, Tradicional, Montessori, Waldorf).
           </p>
           <HashLink
-            to='/niveles#sistema'
+            to='/nosotros#sistema'
             className='more'
             type='button'
             onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}  
-          >
+            onMouseLeave={() => setIsHovering(false)}>
             <img src={isHovering ? moreBtnHover : moreBtn} alt='More' />
           </HashLink>
         </div>
-        <Link to='contacto' className='visit-panel left-squiggly hover-panel-green'>
+        <Link
+          to='contacto'
+          className='visit-panel left-squiggly hover-panel-green'>
           <h6>
             AGENDA UNA
             <br />

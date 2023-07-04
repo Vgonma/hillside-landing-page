@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NivelesT from '../assets/images/titles/NIVELES.svg';
 import star from '../assets/images/bg-icons/doodles-07.svg';
@@ -6,14 +6,12 @@ import earlyLearning from '../assets/images/photos/early_learning_nivel.jpg';
 import preKinder from '../assets/images/photos/pre_kinder.jpg';
 import kinder1 from '../assets/images/photos/kinder_1.jpg';
 import kinder2 from '../assets/images/photos/kinder_2.jpg';
-import sistemaImage from '../assets/images/photos/sistema.jpg';
-import nuestro_sistema from '../assets/images/titles/NUESTRO-SISTEMA.svg';
 import shootingStar from '../assets/images/bg-icons/doodles-08-text-colored.svg';
 import instalaciones from '../assets/images/titles/INSTALACIONES.svg';
-import interactiveRoom from '../assets/images/photos/interactive-room.jpeg';
 
+// Instalaciones image imports
 import gym from '../assets/images/photos/gym.jpg';
-import arte from '../assets/images/photos/arte.jpg';
+import arte from '../assets/images/photos/art_class.jpeg';
 import juegos from '../assets/images/photos/area_juegos.jpg';
 import banos from '../assets/images/photos/kinder_bano.jpg';
 import sensory from '../assets/images/photos/sensory.jpeg';
@@ -21,24 +19,25 @@ import earlyLearningCenter from '../assets/images/photos/early_learning_center.j
 import huerto from '../assets/images/photos/huerto.jpg';
 
 function LevelsHero() {
-  
   const [photoNum, setPhotoNum] = useState(0);
   const [instalacionesNum, setInstalacionesNum] = useState(0);
 
   function hovering(event, num) {
+    Array.from(event.target.parentNode.children).forEach((el) =>
+      el.classList.remove('hovering')
+    );
     event.target.classList.add('hovering');
     setPhotoNum(num);
   }
 
   function roomsHovering(event, num) {
+    Array.from(event.target.parentNode.children).forEach((el) => {
+      el.classList.remove('hovering');
+      el.children[0].classList.remove('svg-white');
+    });
     event.target.classList.add('hovering');
     event.target.children[0].classList.add('svg-white');
     setInstalacionesNum(num);
-  }
-
-  function roomsStopHovering(event) {
-    event.target.classList.remove('hovering');
-    event.target.children[0].classList.remove('svg-white');
   }
 
   function carouselHovering(event) {
@@ -52,10 +51,6 @@ function LevelsHero() {
         el.children[1].classList.add('hidden');
       }
     });
-  }
-
-  function stopHovering(event) {
-    event.target.classList.remove('hovering');
   }
 
   function renderPhoto() {
@@ -90,7 +85,7 @@ function LevelsHero() {
       case 7:
         return <img src={huerto} alt='Huerto' />;
       default:
-        return <img src={arte} alt='Gym' />;
+        return <img src={gym} alt='Gym' />;
     }
   }
 
@@ -98,12 +93,19 @@ function LevelsHero() {
     <>
       <div className='home-section hero' id='hero'>
         <div className='levels-title-container'>
-          <img src={NivelesT} alt='Niveles' />
+          <div className='d-flex justify-center'>
+            <img src={NivelesT} alt='Niveles' className='title-img' />
+          </div>
+          <p className='px-5'>
+            El material y actividades educativos están cuidadosamente
+            seleccionados para impulsar el aprendizaje mediante el juego
+            diverso, dándoles a los alumnos la oportunidad de manipular,
+            cambiar, combinar y rediseñar de maneras infinitas.
+          </p>
           <ul className='levels-ul'>
             <li
-              className='levels-li'
+              className='levels-li hovering'
               onMouseEnter={(e) => hovering(e, 1)}
-              onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(1)}>
               <img className='levels-star svg-white' src={star} alt='star' />
               <p> Early Learning </p>
@@ -112,16 +114,14 @@ function LevelsHero() {
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 2)}
-              onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(2)}>
               <img className='levels-star svg-white' src={star} alt='star' />
-              <p> pre-Kinder </p>
+              <p> Pre-Kinder </p>
               <img className='levels-star svg-white' src={star} alt='star' />
             </li>
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 3)}
-              onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(3)}>
               <img className='levels-star svg-white' src={star} alt='star' />
               <p> Kinder I </p>
@@ -130,7 +130,6 @@ function LevelsHero() {
             <li
               className='levels-li'
               onMouseEnter={(e) => hovering(e, 4)}
-              onMouseLeave={(e) => stopHovering(e)}
               onClick={() => setPhotoNum(4)}>
               <img className='levels-star svg-white' src={star} alt='star' />
               <p> Kinder II </p>
@@ -143,202 +142,159 @@ function LevelsHero() {
         </div>
       </div>
 
-      <div className='home-section nuestro-sistema' id='sistema'>
-        <div className='sistema-1'>
-          <img src={nuestro_sistema} alt='Nuestro Sistema' />
-          <strong>Sistema constructivista</strong>
-          <p>alumno como elemento central</p>
+      <section className='carousel-container'>
+        <div
+          className='carousel-section bg-green hovering'
+          onMouseEnter={(e) => carouselHovering(e)}>
+          <div>
+            <img className='svg-green' src={shootingStar} alt='Shooting Star' />
+            <p className='text-green'>
+              Las clases están diseñadas para el Desarrollo del pensamiento
+              lógico y matemático infantil, así como para el desarrollo del
+              lenguaje y comunicación.
+            </p>
+          </div>
+          <Link to='/contacto' className='bg-green'>
+            <span>AGENDA UNA VISITA!</span>
+          </Link>
         </div>
-        <div className='sistema-2 border-yellow'>
-          <p>
-            Concibe al alumno como elemento central del proceso de aprendizaje.
-            Se adapta a sus necesidades según el contexto, tomando en cuenta de
-            manera integral sus diferencia individuales, intereses personales,
-            actitudes, creencias y estilo de aprendizaje. Asegura aprendizajes
-            significativos y perdurables, a través de la observación, que
-            favorecen la autonomía y la resolución creativa de problemas
-          </p>
+        <div
+          className='carousel-section bg-yellow'
+          onMouseEnter={(e) => carouselHovering(e)}>
+          <div>
+            <img
+              className='svg-yellow'
+              src={shootingStar}
+              alt='Shooting Star'
+            />
+            <p className='text-yellow'>
+              El Hillside propone un ambiente equilibrado entre el desarrollo de
+              las habilidades académicas y el crecimiento socioemocional.
+            </p>
+          </div>
+          <Link to='/contacto' className='bg-yellow hidden'>
+            <span>AGENDA UNA VISITA!</span>
+          </Link>
         </div>
-        <div className='sistema-3'>
-          <img
-            src={sistemaImage}
-            alt='Foto de Nuestro sistema'
-            className='left-squiggly'
-          />
+        <div
+          className='carousel-section bg-blue'
+          onMouseEnter={(e) => carouselHovering(e)}>
+          <div>
+            <img className='svg-blue' src={shootingStar} alt='Shooting Star' />
+            <p className='text-blue'>
+              Promovemos el orden, la estructura y los límites en todas nuestras
+              actividades, para lograr aprender sin esfuerzo y de manera
+              divertida.
+            </p>
+          </div>
+          <Link to='/contacto' className='bg-blue  hidden'>
+            AGENDA UNA VISITA!
+          </Link>
         </div>
-
-        <section className='carousel-container'>
-          <div
-            className='carousel-section bg-green hovering'
-            onMouseEnter={(e) => carouselHovering(e)}>
-            <div>
-              <img
-                className='svg-green'
-                src={shootingStar}
-                alt='Shooting Star'
-              />
-              <p className='text-green'>
-                Las clases están diseñadas para el Desarrollo del pensamiento
-                lógico y matemático infantil, así como para el desarrollo del
-                lenguaje y comunicación.
-              </p>
-            </div>
-            <Link to='/contacto' className='bg-green'>
-              <span>AGENDA UNA VISITA!</span>
-            </Link>
+        <div
+          className='carousel-section bg-green'
+          onMouseEnter={(e) => carouselHovering(e)}>
+          <div>
+            <img className='svg-green' src={shootingStar} alt='Shooting Star' />
+            <p className='text-green'>
+              Las generaciones graduadas de Hillside School, siempre han tenido
+              abiertas las puertas de los mejores colegios en México ya que
+              están conformadas por alumnos íntegros, sociales y talentosos.
+            </p>
           </div>
-          <div
-            className='carousel-section bg-yellow'
-            onMouseEnter={(e) => carouselHovering(e)}>
-            <div>
-              <img
-                className='svg-yellow'
-                src={shootingStar}
-                alt='Shooting Star'
-              />
-              <p className='text-yellow'>
-                Buscamos que el alumno se sienta aceptado y querido como en
-                casa, para el excelente desarrollo de su autoestima.
-              </p>
-            </div>
-            <Link to='/contacto' className='bg-yellow hidden'>
-              <span>AGENDA UNA VISITA!</span>
-            </Link>
+          <Link to='/contacto' className='bg-green  hidden'>
+            AGENDA UNA VISITA!
+          </Link>
+        </div>
+        <div
+          className='carousel-section bg-yellow'
+          onMouseEnter={(e) => carouselHovering(e)}>
+          <div>
+            <img
+              className='svg-yellow'
+              src={shootingStar}
+              alt='Shooting Star'
+            />
+            <p className='text-yellow'>
+              Apoyo a padres de familia en situaciones especiales de manejo de
+              conducta o emocionales.
+            </p>
           </div>
-          <div
-            className='carousel-section bg-blue'
-            onMouseEnter={(e) => carouselHovering(e)}>
-            <div>
-              <img
-                className='svg-blue'
-                src={shootingStar}
-                alt='Shooting Star'
-              />
-              <p className='text-blue'>
-                Promovemos el orden, la estructura y los límites en todas
-                nuestras actividades, para lograr aprender sin esfuerzo y de
-                manera divertida.
-              </p>
-            </div>
-            <Link to='/contacto' className='bg-blue  hidden'>
-              AGENDA UNA VISITA!
-            </Link>
+          <Link to='/contacto' className='bg-yellow  hidden'>
+            AGENDA UNA VISITA!
+          </Link>
+        </div>
+        <div
+          className='carousel-section bg-blue'
+          onMouseEnter={(e) => carouselHovering(e)}>
+          <div>
+            <img className='svg-blue' src={shootingStar} alt='Shooting Star' />
+            <p className='text-blue'>
+              El equipo docente cuenta con una gran experiencia educativa y es
+              capacitado constantemente para estar siempre a la vanguardia.
+            </p>
           </div>
-          <div
-            className='carousel-section bg-green'
-            onMouseEnter={(e) => carouselHovering(e)}>
-            <div>
-              <img
-                className='svg-green'
-                src={shootingStar}
-                alt='Shooting Star'
-              />
-              <p className='text-green'>
-                Desarrollo de la socialización en actividades dinámicas,
-                promoviendo el respeto y la generosidad.
-              </p>
-            </div>
-            <Link to='/contacto' className='bg-green  hidden'>
-              AGENDA UNA VISITA!
-            </Link>
-          </div>
-          <div
-            className='carousel-section bg-yellow'
-            onMouseEnter={(e) => carouselHovering(e)}>
-            <div>
-              <img
-                className='svg-yellow'
-                src={shootingStar}
-                alt='Shooting Star'
-              />
-              <p className='text-yellow'>
-                Apoyo a padres de familia en situaciones especiales de manejo de
-                conducta o emocionales.
-              </p>
-            </div>
-            <Link to='/contacto' className='bg-yellow  hidden'>
-              AGENDA UNA VISITA!
-            </Link>
-          </div>
-          <div
-            className='carousel-section bg-blue'
-            onMouseEnter={(e) => carouselHovering(e)}>
-            <div>
-              <img
-                className='svg-blue'
-                src={shootingStar}
-                alt='Shooting Star'
-              />
-              <p className='text-blue'>
-                El 100% de nuestros alumnos son admitidos en los colegios de su
-                elección.
-              </p>
-            </div>
-            <Link to='/contacto' className='bg-blue  hidden'>
-              AGENDA UNA VISITA!
-            </Link>
-          </div>
-        </section>
-      </div>
+          <Link to='/contacto' className='bg-blue  hidden'>
+            AGENDA UNA VISITA!
+          </Link>
+        </div>
+      </section>
 
       <div className='home-section equipment hero' id='instalaciones'>
         <div className='hero-image-container right-squiggly'>
           {renderInstalaciones()}
         </div>
         <div className='levels-title-container rooms-title-container'>
-          <img src={instalaciones} alt='Instalaciones' />
+          <div className='d-flex justify-center'>
+
+          <img src={instalaciones} alt='Instalaciones' className='title-img' />
+          </div>
           <p className='px-5'>
-            Cada salón cuenta con material especialmente dirigido para el
-            desarrollo de habilidades y del pensamiento de los alumnos, según su
-            edad
+            Las instalaciones ofrecen salones diseñados para pequeños grupos,
+            creando así, un ambiente de aprendizaje individual e integral.
+            Cuenta con un amplio jardín que es una extensión de las clases,
+            donde los alumnos pasan gran parte de su día y crean comunidad.
           </p>
           <ul className='levels-ul rooms-ul'>
             <li
-              className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 1)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
-              <img src={star} alt='star' className='svg-yellow' />
-              <p> Salón de Gym y música </p>
+              className='levels-li rooms-li hovering'
+              onMouseEnter={(e) => roomsHovering(e, 1)}>
+              <img src={star} alt='star' className='svg-yellow svg-white' />
+              <p> Gym al aire libre </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 2)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 2)}>
               <img src={star} alt='star' className='svg-yellow' />
-              <p> Salón para arte </p>
+              <p> Arte al aire libre </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 3)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 3)}>
               <img src={star} alt='star' className='svg-yellow' />
-              <p> Área de juegos </p>
+              <p> Ludoteca </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 4)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 4)}>
               <img src={star} alt='star' className='svg-yellow' />
-              <p> Baños con muebles adecuados para su estatura </p>
+              <p> Salón de música </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 5)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 5)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Sensory Room </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 6)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 6)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Early Learning Center </p>
             </li>
             <li
               className='levels-li rooms-li'
-              onMouseEnter={(e) => roomsHovering(e, 7)}
-              onMouseLeave={(e) => roomsStopHovering(e)}>
+              onMouseEnter={(e) => roomsHovering(e, 7)}>
               <img src={star} alt='star' className='svg-yellow' />
               <p> Huerto </p>
             </li>
