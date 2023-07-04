@@ -93,7 +93,15 @@ function LevelsHero() {
     <>
       <div className='home-section hero' id='hero'>
         <div className='levels-title-container'>
-          <img src={NivelesT} alt='Niveles' />
+          <div className='d-flex justify-center'>
+            <img src={NivelesT} alt='Niveles' className='title-img' />
+          </div>
+          <p className='px-5'>
+            El material y actividades educativos están cuidadosamente
+            seleccionados para impulsar el aprendizaje mediante el juego
+            diverso, dándoles a los alumnos la oportunidad de manipular,
+            cambiar, combinar y rediseñar de maneras infinitas.
+          </p>
           <ul className='levels-ul'>
             <li
               className='levels-li hovering'
@@ -237,7 +245,10 @@ function LevelsHero() {
           {renderInstalaciones()}
         </div>
         <div className='levels-title-container rooms-title-container'>
-          <img src={instalaciones} alt='Instalaciones' />
+          <div className='d-flex justify-center'>
+
+          <img src={instalaciones} alt='Instalaciones' className='title-img' />
+          </div>
           <p className='px-5'>
             Las instalaciones ofrecen salones diseñados para pequeños grupos,
             creando así, un ambiente de aprendizaje individual e integral.

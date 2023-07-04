@@ -135,7 +135,13 @@
 }
 
 .title-img {
-  max-width: 345px;
+  max-height: 90px;
+  padding: 1rem;
+}
+
+.title-img-2line {
+  max-height: 180px;
+  padding: 1rem;
 }
 
 .z-1 {
@@ -657,6 +663,15 @@
 .equipment {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 3rem;
+}
+
+.levels-title-container > p {
+  font-family: 'pp_telegraf';
+  color: var(--blue);
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .rooms-title-container > p {

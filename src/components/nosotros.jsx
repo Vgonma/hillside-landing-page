@@ -15,7 +15,7 @@ function Nosotros() {
       <section className='home-section nosotros-hero' id='hero'>
         <div className='nosotros-hero-left'>
           <div className='nosotros-hero-left-text'>
-            <img src={NosotrosTitle} alt='Nosotros' className='' />
+            <img src={NosotrosTitle} alt='Nosotros' className='title-img' />
             <p>
               Hillside School fue fundado hace 26 años por Martha Sáenz
               Castillo, educadora y maestra en Estados Unidos y México, quien al
@@ -42,7 +42,7 @@ function Nosotros() {
 
       <section className='home-section nuestro-sistema' id='sistema'>
         <div className='sistema-1'>
-          <img src={nuestroPrograma} alt='Nuestro Sistema' />
+          <img src={nuestroPrograma} alt='Nuestro Sistema' className='title-img-2line' />
           <h3>Multi - Track</h3>
           <h4>SKILLS FOR LIFE</h4>
           <p className='text-center'>
