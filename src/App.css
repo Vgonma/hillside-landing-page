@@ -168,6 +168,11 @@
   /* padding-bottom: 210px; */
 }
 
+.footer-spacer {
+  content: '';
+  height: 200px;
+}
+
 .navbar {
   padding: 0.5rem;
   position: sticky;
@@ -699,7 +704,8 @@
 .nosotros-hero {
   position: relative;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 70dvh;
 }
 
 .nosotros-hero-left{
@@ -712,7 +718,7 @@
 .nosotros-hero-left-text {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 0.5rem;
   align-items: center;
   padding: 2rem;
   margin-bottom: 5rem;
@@ -720,6 +726,7 @@
 
 .nosotros-hero-left-text p {
   max-width: 550px;
+  margin-top: -70px;
 }
 
 .band-button {

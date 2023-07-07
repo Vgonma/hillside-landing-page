@@ -1,27 +1,22 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
-import photo from '../assets/images/photos/photo_43.jpg';
-import programa from '../assets/images/titles/NUESTRO-PROGRAMA.svg';
-import moreBtn from '../assets/images/icons/more_1.png';
-import moreBtnHover from '../assets/images/icons/more_2.png';
+import React from 'react';
+import nuestroPrograma from '../assets/images/titles/NUESTRO-PROGRAMA.svg';
+import sistemaImage from '../assets/images/photos/sistema.jpg';
+import listStar from '../assets/images/bg-icons/doodles-07.svg';
 
 function Program() {
-  const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div id='programa' className='home-section three-panels'>
-      <div className='layer2 extend'>
-        <img className='section-image' src={photo} alt='' />
-      </div>
-      <div className='layer1'>
-        <div className='program-panel info-panel panel right-squiggly'>
-          <div className='title-img-container'>
-            <img src={programa} alt='Nosotros' />
-          </div>
+    <>
+          <section className='home-section nuestro-sistema' id='sistema'>
+        <div className='sistema-1'>
+          <img
+            src={nuestroPrograma}
+            alt='Nuestro Sistema'
+            className='title-img-2line'
+          />
           <h3>Multi - Track</h3>
-          <h4>(múltiples vías de aprendizaje)</h4>
-          <p>
+          <h4>SKILLS FOR LIFE</h4>
+          <p className='text-justify'>
             Con 26 años de experiencia y habiendo trabajado con distintos
             modelos educativos, fomentamos el aprendizaje natural e
             independiente por medio del juego, los sentidos, el pensamiento
@@ -30,26 +25,76 @@ function Program() {
             niños es óptimo al integrar diferentes métodos de aprendizaje
             (Constructivista, Tradicional, Montessori, Waldorf).
           </p>
-          <HashLink
-            to='/nosotros#sistema'
-            className='more'
-            type='button'
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}>
-            <img src={isHovering ? moreBtnHover : moreBtn} alt='More' />
-          </HashLink>
         </div>
-        <Link
-          to='contacto'
-          className='visit-panel left-squiggly hover-panel-green'>
-          <h6>
-            AGENDA UNA
-            <br />
-            VISITA!
-          </h6>
-        </Link>
-      </div>
-    </div>
+
+        <div className='sistema-2 border-yellow'>
+          <ul className='border-yellow'>
+            <img
+              src={listStar}
+              alt='star'
+              className='svg-yellow between-star'
+            />
+            <li className='d-flex align-center'>
+              Aptitudes para convertirse en personas más capaces y felices.
+            </li>
+            <img
+              src={listStar}
+              alt='star'
+              className='svg-yellow between-star'
+            />
+            <li>Autorregulación emocional.</li>
+            <img
+              src={listStar}
+              alt='star'
+              className='svg-yellow between-star'
+            />
+            <li>Construcción de relaciones sanas y resolución de conflictos</li>
+            <img
+              src={listStar}
+              alt='star'
+              className='svg-yellow between-star'
+            />
+            <li>
+              Desarrollo de una buena autoestima a medida que van tomando sus
+              propias decisiones.
+            </li>
+            <img
+              src={listStar}
+              alt='star'
+              className='svg-yellow between-star'
+            />
+            <li>
+              Explorar, identificar, tomar riesgos y crear conciencia de su
+              entorno
+            </li>
+            <img
+              src={listStar}
+              alt='star'
+              className='svg-yellow between-star'
+            />
+            <li>Desarrollo del lenguaje y comunicación.</li>
+            <img
+              src={listStar}
+              alt='star'
+              className='svg-yellow between-star'
+            />
+            <li>Adaptación escolar y aprendizaje académico.</li>
+            <img
+              src={listStar}
+              alt='star'
+              className='svg-yellow between-star'
+            />
+          </ul>
+        </div>
+        <div className='sistema-3'>
+          <img
+            src={sistemaImage}
+            alt='Foto de Nuestro sistema'
+            className='left-squiggly'
+          />
+        </div>
+      </section>
+    </>
   );
 }
 

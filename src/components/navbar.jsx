@@ -17,9 +17,9 @@ function Navbar() {
         <NavLink className='nav-link' to='nosotros'>
           Nosotros
         </NavLink>
-        <HashLink className='nav-link' to='/#programa'>
+        <NavLink className='nav-link' to='programa'>
           Programa
-        </HashLink>
+        </NavLink>
         <NavLink className='nav-link' to='niveles'>
           Niveles
         </NavLink>
