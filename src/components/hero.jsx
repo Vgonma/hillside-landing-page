@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import play from '../assets/images/photos/hillside_play.jpg';
 import grow from '../assets/images/photos/hillside_grow.jpeg';
 import learn from '../assets/images/photos/hillside_learn.jpg';
+import skills4life from '../assets/images/titles/SKILLS-FOR-LIFE.svg';
 
 function Hero() {
   const [image, setImage] = useState(0);
@@ -21,10 +22,7 @@ function Hero() {
   return (
     <div className='home-section hero'>
       <div className='hero-title-container'>
-        <div>
-          <h1 className='hero-title'>at HilLsiDe wE...</h1>
-          <h1 className=''>{wordList[image]}</h1>
-        </div>
+          <img src={skills4life} alt="Skills for life" />
       </div>
       <div className='hero-image-container left-squiggly'>
         <img src={imageList[image]} alt='playground' />

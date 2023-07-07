@@ -19,7 +19,6 @@ function App() {
         <Route path='contacto' element={<Contact />} />
         <Route path='*' element={<Home />} />
       </Routes>
-      <Footer />
     </div>
   );
 }

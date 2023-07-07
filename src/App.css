@@ -226,21 +226,23 @@
 }
 
 .home-section {
-  /* aspect-ratio: 16/9; */
-  height: calc(100dvh - 50px);
+  height: calc(100dvh - 55px);
 
 }
 .hero {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
   align-items: center;
+  justify-items: center;
 }
 
 .hero-title-container {
   display: flex;
   justify-content: center;
   color: #008647;
-  padding: 2rem;
+  padding: 4rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 .hero-title-container h1 {
@@ -470,10 +472,6 @@
   display: flex;
   align-items: center;
   column-gap: .5rem;
-}
-
-.footer-info-container .info4 {
-  padding: 0.3rem;
 }
 
 .footer-info-container .info2 {
