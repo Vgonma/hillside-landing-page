@@ -674,17 +674,13 @@
 .levels-title-container > p {
   font-family: 'pp_telegraf';
   color: var(--blue);
-  text-align: center;
   line-height: 1.2;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
 }
 
 .rooms-title-container > p {
   font-family: 'pp_telegraf';
   color: var(--blue);
-  text-align: center;
-  font-size: 1.5rem;
 }
 
 .rooms-ul {

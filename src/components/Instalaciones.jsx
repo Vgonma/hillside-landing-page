@@ -61,7 +61,7 @@ function Instalaciones() {
               className='title-img'
             />
           </div>
-          <p className='px-5'>
+          <p className='px-5 text-justify'>
             Las instalaciones ofrecen salones diseñados para pequeños grupos,
             creando así, un ambiente de aprendizaje individual e integral.
             Cuenta con un amplio jardín que es una extensión de las clases,
@@ -113,6 +113,7 @@ function Instalaciones() {
           </ul>
         </div>
       </div>
+      <div className='footer-spacer' />
       <Footer />
     </>
   );

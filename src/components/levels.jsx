@@ -45,7 +45,7 @@ function LevelsHero() {
           <div className='d-flex justify-center'>
             <img src={NivelesT} alt='Niveles' className='title-img' />
           </div>
-          <p className='px-5'>
+          <p className='px-5 text-justify'>
             El material y actividades educativos están cuidadosamente
             seleccionados para impulsar el aprendizaje mediante el juego
             diverso, dándoles a los alumnos la oportunidad de manipular,
