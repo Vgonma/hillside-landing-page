@@ -1,4 +1,8 @@
 import React from 'react';
+// Component imports
+import Activities from './activities';
+import Footer from './footer';
+// Assets imports
 import nuestroPrograma from '../assets/images/titles/NUESTRO-PROGRAMA.svg';
 import sistemaImage from '../assets/images/photos/sistema.jpg';
 import listStar from '../assets/images/bg-icons/doodles-07.svg';
@@ -94,6 +98,9 @@ function Program() {
           />
         </div>
       </section>
+      <Activities />
+      <div className="footer-spacer" />
+      <Footer />
     </>
   );
 }
