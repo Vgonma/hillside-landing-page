@@ -855,7 +855,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: calc(100dvh - 260px);
+  height: calc(100dvh - 60px);
 }
 
 .contact-form-container {
@@ -936,9 +936,9 @@ label {
 .whatsapp {
   position: fixed;
   left: 1.7rem;
-  bottom: 235px;
+  bottom: 50px;
   width: 60px;
-  z-index: inherit;
+  z-index: 2;
 }
 
 .whatsapp:hover {

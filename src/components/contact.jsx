@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+// Component imports
+import Footer from './footer';
+
+// Image imports
 import contact from '../assets/images/titles/CONTACTO.svg';
 import doodle from '../assets/images/bg-icons/doodles-12.svg';
-import { Link } from 'react-router-dom';
-
-//Image imports
 import whatsapp from '../assets/images/icons/whatsapp.png';
 
 function Contact() {
@@ -101,7 +103,7 @@ function Contact() {
             <iframe
               className='map'
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.6905560775626!2d-99.28910830941635!3d19.356429782828403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d20737fa22f493%3A0x431da45f3f0fad76!2sHillside%20School!5e0!3m2!1sen!2smx!4v1686177999143!5m2!1sen!2smx'
-              width='600'
+              width='450'
               height='450'
               loading='lazy'
               referrerPolicy='no-referrer-when-downgrade'></iframe>
@@ -121,6 +123,8 @@ function Contact() {
             </Link>
           </div>
       </section>
+      <div className="footer-spacer" />
+      <Footer />
     </>
   );
 }
