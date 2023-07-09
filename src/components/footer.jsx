@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     <footer className='footer '>
-      <Link to='contacto' className='sun'>
+      <Link to='/contacto' className='sun'>
         Agenda una visita!
       </Link>
       <div className='grass top-squiggly-wide bg-green'>
