@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Program from './components/program';
 import Home from './components/home';
-import Levels from './components/Levels'
+import Levels from './components/levels'
 import Nosotros from './components/nosotros';
 import Contact from './components/contact';
 import './App.css';
