@@ -936,6 +936,10 @@ label {
   letter-spacing: 1px;
 }
 
+.submit-btn:hover {
+  transform: scale(1.1);
+}
+
 .whatsapp {
   position: fixed;
   left: 1.7rem;
