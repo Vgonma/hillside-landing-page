@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import instagram from '../assets/images/icons/instagram_icono.svg';
 import facebook from '../assets/images/icons/facebook_icono.svg';
-import logo from '../assets/images/logos/logo-blanco.svg';
+import logo from '../assets/images/logos/logo-footer.svg';
 
 function Footer() {
   function scrollToTop() {

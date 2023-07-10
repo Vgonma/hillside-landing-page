@@ -486,6 +486,11 @@
   grid-column: 2;
 }
 
+.footer-info-container .info4 {
+  display: flex;
+  justify-content: center;
+}
+
 .footer-info-container p {
   text-align: center;
   font-size: 12px;
@@ -504,7 +509,8 @@
 }
 
 .footer-logo {
-  max-width: 100px;
+  max-width: 80px;
+  padding: 5px;
 }
 
 .sun {

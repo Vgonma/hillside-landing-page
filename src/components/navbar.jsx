@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import logo from '../assets/images/logos/logo_rectangular2.svg';
+import logo from '../assets/images/logos/logo-NavBar.svg';
 
 function Navbar() {
   function scrollToTop() {
