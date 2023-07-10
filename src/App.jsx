@@ -1,12 +1,12 @@
-import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
-import Footer from './components/footer';
+import Program from './components/program';
 import Home from './components/home';
-import Levels from './components/levels'
+import Levels from './components/Levels'
 import Nosotros from './components/nosotros';
 import Contact from './components/contact';
 import './App.css';
+import Instalaciones from './components/Instalaciones';
 
 function App() {
   return (
@@ -15,11 +15,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='nosotros' element={<Nosotros />} />
+        <Route path='programa' element={<Program />} />
         <Route path='niveles' element={<Levels />} />
+        <Route path='instalaciones' element={<Instalaciones />} />
         <Route path='contacto' element={<Contact />} />
         <Route path='*' element={<Home />} />
       </Routes>
-      <Footer />
     </div>
   );
 }

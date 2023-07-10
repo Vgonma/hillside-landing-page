@@ -22,7 +22,7 @@ function Activities() {
           <div className='grid-el large'>
             <h2 className='text-green'>EXtrAs</h2>
             <ul className='border-yellow'>
-            <li>Programa de arte- Adaptado al método Doman</li>
+            <li>Programa de arte- Adaptado al Método Doman</li>
                 <li>Programa de tiendita de logros interpersonal</li>
                 <li>Programa del cuento con sentido</li>
                 <li>Curso de verano</li>

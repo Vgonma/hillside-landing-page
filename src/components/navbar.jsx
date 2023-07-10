@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import logo from '../assets/images/logos/logo_rectangular2.svg';
+import logo from '../assets/images/logos/logo-NavBar.svg';
 
 function Navbar() {
   function scrollToTop() {
@@ -17,15 +17,15 @@ function Navbar() {
         <NavLink className='nav-link' to='nosotros'>
           Nosotros
         </NavLink>
-        <HashLink className='nav-link' to='/#programa'>
+        <NavLink className='nav-link' to='programa'>
           Programa
-        </HashLink>
+        </NavLink>
         <NavLink className='nav-link' to='niveles'>
           Niveles
         </NavLink>
-        <HashLink className='nav-link' to='niveles#instalaciones' >
+        <NavLink className='nav-link' to='instalaciones' >
           Instalaciones
-        </HashLink>
+        </NavLink>
         <NavLink className='nav-link' to='contacto'>
           Contacto
         </NavLink>

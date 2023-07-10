@@ -66,6 +66,10 @@
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .pos-relative {
   position: relative;
 }
@@ -160,8 +164,13 @@
 
 .App {
   position: relative;
-  min-height: 100vh;
-  padding-bottom: 210px;
+  min-height: 100dvh;
+  /* padding-bottom: 210px; */
+}
+
+.footer-spacer {
+  content: '';
+  height: 200px;
 }
 
 .navbar {
@@ -222,20 +231,23 @@
 }
 
 .home-section {
-  /* aspect-ratio: 16/9; */
-  min-height: 800px;
+  height: calc(100dvh - 55px);
+
 }
 .hero {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
   align-items: center;
+  justify-items: center;
 }
 
 .hero-title-container {
   display: flex;
   justify-content: center;
   color: #008647;
-  padding: 2rem;
+  padding: 4rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 .hero-title-container h1 {
@@ -414,9 +426,8 @@
 }
 
 .footer {
-  height: 210px;
-  padding-top: 2rem;
-  position: absolute;
+  height: 110px;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -428,12 +439,11 @@
 }
 
 .grass {
-  height: 10rem;
   width: 100%;
   display: flex;
   align-items: flex-end;
   pointer-events: none;
-  padding-top: 185px;
+  padding-top: 45px;
 }
 
 .grass * {
@@ -442,21 +452,14 @@
 
 .footer-info-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
+  grid-template-columns: 2fr 5fr 1fr 1fr;
   width: 100%;
   column-gap: 1rem;
-  margin: 0 2rem 1rem;
+  margin: 0 2rem;
 }
 
 .footer-info-container > * {
   padding-top: 1rem;
-}
-
-.footer-info-container > ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
 }
 
 .footer-info-container a {
@@ -464,24 +467,32 @@
   color: white;
 }
 
+.footer-info-container .info1 {
+  display: grid;
+  align-items: center;
+}
+
 .footer-info-container .info3 {
-  grid-column: 4;
+  grid-column: 3;
   display: flex;
   align-items: center;
   column-gap: .5rem;
 }
 
-.footer-info-container .info4 {
-  padding: 0.3rem;
-}
-
-.footer-info-container .info5 {
+.footer-info-container .info2 {
+  display: grid;
+  align-items: center;
   grid-row: 1;
-  grid-column: 3;
-  text-align: center;
+  grid-column: 2;
 }
 
-.footer-info-container .info5 p {
+.footer-info-container .info4 {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-info-container p {
+  text-align: center;
   font-size: 12px;
   letter-spacing: 1px;
   color: white;
@@ -498,7 +509,8 @@
 }
 
 .footer-logo {
-  max-width: 100px;
+  max-width: 80px;
+  padding: 5px;
 }
 
 .sun {
@@ -507,7 +519,7 @@
   aspect-ratio: 1/1;
   width: 130px;
   position: absolute;
-  transform: translateY(-75%);
+  transform: translateY(-50%);
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -520,7 +532,7 @@
 }
 
 .sun:hover {
-  transform: translateY(-80%) scale(1.2);
+  transform: translateY(-55%) scale(1.1);
 }
 
 .levels-ul {
@@ -663,22 +675,24 @@
 .equipment {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 3rem;
+  align-items: flex-start;
+
 }
 
 .levels-title-container > p {
   font-family: 'pp_telegraf';
   color: var(--blue);
-  text-align: center;
   line-height: 1.2;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+}
+
+.rooms-title-container {
+  margin-top: 2rem;
 }
 
 .rooms-title-container > p {
   font-family: 'pp_telegraf';
   color: var(--blue);
-  text-align: center;
-  font-size: 1.5rem;
 }
 
 .rooms-ul {
@@ -698,7 +712,8 @@
 .nosotros-hero {
   position: relative;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 70dvh;
 }
 
 .nosotros-hero-left{
@@ -711,15 +726,15 @@
 .nosotros-hero-left-text {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 0.5rem;
   align-items: center;
   padding: 2rem;
   margin-bottom: 5rem;
 }
 
 .nosotros-hero-left-text p {
-  text-align: center;
   max-width: 550px;
+  margin-top: -70px;
 }
 
 .band-button {
@@ -848,7 +863,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: calc(100dvh - 260px);
+  height: calc(100dvh - 60px);
 }
 
 .contact-form-container {
@@ -866,6 +881,7 @@
 
 form {
   padding: 3rem;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -926,12 +942,16 @@ label {
   letter-spacing: 1px;
 }
 
+.submit-btn:hover {
+  transform: scale(1.1);
+}
+
 .whatsapp {
   position: fixed;
   left: 1.7rem;
-  bottom: 235px;
+  bottom: 50px;
   width: 60px;
-  z-index: inherit;
+  z-index: 2;
 }
 
 .whatsapp:hover {
@@ -960,14 +980,6 @@ label {
 @media only screen and (max-width: 1000px) {
   html {
     font-size: 12px;
-  }
-
-  .sun {
-    transform: translateY(-90%);
-  }
-
-  .sun:hover {
-    transform: translateY(-95%) scale(1.2);
   }
 
   .info-panel {
