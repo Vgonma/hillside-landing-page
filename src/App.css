@@ -669,6 +669,8 @@
 .equipment {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 3rem;
+  align-items: flex-start;
+
 }
 
 .levels-title-container > p {
@@ -676,6 +678,10 @@
   color: var(--blue);
   line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+.rooms-title-container {
+  margin-top: 2rem;
 }
 
 .rooms-title-container > p {
@@ -869,6 +875,7 @@
 
 form {
   padding: 3rem;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

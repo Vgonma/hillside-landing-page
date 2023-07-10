@@ -57,11 +57,6 @@ function Contact() {
         <div className='contact-form-container bg-blue right-squiggly'>
           <div className='d-flex pos-relative'>
             <img src={contact} alt='Contacto' className='contacto-title' />
-            <img
-              src={doodle}
-              alt='doodle'
-              className='svg-white contact-shooting-star'
-            />
           </div>
           <form method='post' onSubmit={(e) => submitHandler(e)}>
             <label className='text-input-label' htmlFor='nombre'>

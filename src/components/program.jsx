@@ -4,7 +4,7 @@ import Activities from './activities';
 import Footer from './footer';
 // Assets imports
 import nuestroPrograma from '../assets/images/titles/NUESTRO-PROGRAMA.svg';
-import sistemaImage from '../assets/images/photos/sistema.jpg';
+import programa from '../assets/images/photos/programa.jpg';
 import listStar from '../assets/images/bg-icons/doodles-07.svg';
 
 function Program() {
@@ -92,7 +92,7 @@ function Program() {
         </div>
         <div className='sistema-3'>
           <img
-            src={sistemaImage}
+            src={programa}
             alt='Foto de Nuestro sistema'
             className='left-squiggly'
           />
