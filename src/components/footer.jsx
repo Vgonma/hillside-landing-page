@@ -44,7 +44,7 @@ function Footer() {
           <div className='info2'>
             <div>
               <p>
-                Tel: 5813 6270 <br />
+                Tel: 55 5813 6207 <br />
                 <a href='mailto: info@hillside.com.mx'>info@hillside.com.mx</a>
               </p>
             </div>
